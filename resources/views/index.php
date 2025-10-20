@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Woman Safe</title>
 </head>
 <body>
@@ -11,28 +11,28 @@
     <header class="nav">
         <div class="container">
             <div class="logo">
-                <a href="index.html"><img src="img/logo.png"></a>
+                <a href="index.php"><img src="../images/logo.png"></a>
             </div>
             <nav class="nav-item">
-                <a class="text" href="index.html">Главная</a>&emsp;
-                <a class="text" href="map.html">Карта</a>&emsp;
-                <a class="text" href="catalog.html">Каталог</a>&emsp;
-                <a class="text" href="resources.html">Ресурсы</a>&emsp;
-                <a class="text" href="about-us.html">О &ensp;нас</a>&emsp;
-                <button><a href="favourites.html"><img src="img/favouriticon.svg"></a></button>
-                <button><a href="registration.html"><img src="img/log-icon.svg"></a></button>
+                <a class="text" href="index.php">Главная</a>&emsp;
+                <a class="text" href="map.php">Карта</a>&emsp;
+                <a class="text" href="catalog.php">Каталог</a>&emsp;
+                <a class="text" href="resources.php">Ресурсы</a>&emsp;
+                <a class="text" href="about-us.php">О &ensp;нас</a>&emsp;
+                <button><a href="favourites.php"><img src="../images/favourit-icon.svg"></a></button>
+                <button><a href="registration.php"><img src="../images/log-icon.svg"></a></button>
             </nav>
         </div>
     </header>
     <main>
         <section class="preview">
-            <img src="img/preview.png">
-            <button><img src="img/message_icon.png">Вступить в коммьюнити</button>
+            <img src="../images/preview.png">
+            <button><img src="../images/message_icon.png">Вступить в коммьюнити</button>
         </section>
         <section class="map">
             <div class="map-main">
                 <div class="interactive-map">
-                    <img src="img/butterfly.png">
+                    <img src="../images/butterfly.png">
                     <script type="text/javascript" charset="utf-8" async
                             src="https://apimaps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A473d2b64f2a91950e979354456
 c3faf6a5141dd5d5662fe0940f4de511ea7b3c&amp;width=534&amp;height=316&amp;lang=ru_
@@ -52,8 +52,8 @@ RU&amp;scroll=true"></script>
                             мы сможем сделать большой шаг к справедливому и равному
                             обществу!</p>
                         <div class="map-button">
-                            <img src="img/butterfly.png">
-                            <button type="button"><a href="map.html">Карта
+                            <img src="../images/butterfly.png">
+                            <button type="button"><a href="map.php">Карта
                                     безопасности</a></button>
                         </div>
                     </div>
@@ -72,7 +72,7 @@ RU&amp;scroll=true"></script>
                 <div class="catalog-cards">
                     <article>
                         <div class="catalog-img-card">
-                            <img src="img/product1.png" alt="photo">
+                            <img src="../images/product1.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -84,7 +84,7 @@ RU&amp;scroll=true"></script>
                                     </div>
                                     <div class="items">
                                         <span>1990₽</span>
-                                        <button><img src="img/favourit-icon.svg"></button>
+                                        <button><img src="../images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@ RU&amp;scroll=true"></script>
                     </article>
                     <article>
                         <div class="catalog-img-card">
-                            <img src="img/product2.png" alt="photo">
+                            <img src="../images/product2.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -104,7 +104,7 @@ RU&amp;scroll=true"></script>
                                     </div>
                                     <div class="items">
                                         <span>1990₽</span>
-                                        <button><img src="img/favourit-icon.svg"></button>
+                                        <button><img src="../images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@ RU&amp;scroll=true"></script>
                     </article>
                     <article>
                         <div class="catalog-img-card">
-                            <img src="img/product3.png" alt="photo">
+                            <img src="../images/product3.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -124,7 +124,7 @@ RU&amp;scroll=true"></script>
                                     </div>
                                     <div class="items">
                                         <span>1099₽</span>
-                                        <button><img src="img/favourit-icon.svg"></button>
+                                        <button><img src="../images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -132,7 +132,7 @@ RU&amp;scroll=true"></script>
                     </article>
                     <article>
                         <div class="catalog-img-card">
-                            <img src="img/product4.png" alt="photo">
+                            <img src="../images/product4.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -147,7 +147,7 @@ RU&amp;scroll=true"></script>
                                             <span>699₽</span>
                                             <p>999₽</p>
                                         </div>
-                                        <button><img src="img/favourit-icon.svg"></button>
+                                        <button><img src="../images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -155,7 +155,7 @@ RU&amp;scroll=true"></script>
                     </article>
                 </div>
                 <div class="catalog-button">
-                    <button><a class="button" href="catalog.html">Показать еще</a></button>
+                    <button><a class="button" href="catalog.php">Показать еще</a></button>
                 </div>
             </div>
         </section>
@@ -177,9 +177,9 @@ RU&amp;scroll=true"></script>
                                         кризисных центрах и номера горячих линий служб поддержки.</p></div>
                             </div>
                             <div class="button-r"><button><a class="button"
-                                                             href="resources.html">Подробнее</a></button></div>
+                                                             href="resources.php">Подробнее</a></button></div>
                         </div>
-                        <div class="resourse-main-img"> <img src="img/woman-leaves.png"></div>
+                        <div class="resourse-main-img"> <img src="../images/woman-leaves.png"></div>
                     </div>
                 </div>
             </div>
@@ -189,7 +189,7 @@ RU&amp;scroll=true"></script>
                 <p>О нас</p>
                 <div class="about-us-main">
                     <div class="about-us-main-img">
-                        <img src="img/woman-fly.png">
+                        <img src="../images/woman-fly.png">
                     </div>
                     <div class="about-us-main-text">
                         <div class="about-us-text">
@@ -207,7 +207,7 @@ RU&amp;scroll=true"></script>
                                     поддержки и другие важные ресурсы, помогающие женщинам в сложных ситуациях</p>
                             </div>
                         </div>
-                        <div class="button-a"><button><a href="aboutus.html">Подробнее</a></button></div>
+                        <div class="button-a"><button><a href="aboutus.php">Подробнее</a></button></div>
                     </div>
                 </div>
             </div>
@@ -217,16 +217,16 @@ RU&amp;scroll=true"></script>
         <div class="footer-container">
             <div class="footer-info">
                 <div class="footer-logo">
-                    <img src="img/logo.png">
+                    <img src="../images/logo.png">
                     <p>Сайт проекта “WS”. Все права защищены ©</p>
                 </div>
                 <div class="footer-nav">
                     <h3>Навигация</h3>
-                    <a class="text" href="index.html">Главная</a>
-                    <a class="text" href="map.html">Карта</a>
-                    <a class="text" href="catalog.html">Каталог</a>
-                    <a class="text" href="resources.html">Ресурсы</a>
-                    <a class="text" href="about-us.html">О нас</a>
+                    <a class="text" href="index.php">Главная</a>
+                    <a class="text" href="map.php">Карта</a>
+                    <a class="text" href="catalog.php">Каталог</a>
+                    <a class="text" href="resources.php">Ресурсы</a>
+                    <a class="text" href="about-us.php">О нас</a>
                 </div>
                 <div class="footer-project">
                     <h3>О проекте</h3>
@@ -243,11 +243,11 @@ B%D0%AC%D0%9D%D0%9E%D0%A1%D0%A2%D0%98.pdf">Политика
                 </div>
                 <div class="footer-map">
                     <h3>Карта безопасности</h3>
-                    <a href="map.html">Карта безопасных мест</a>
+                    <a href="map.php">Карта безопасных мест</a>
                     <a href="">Добавить место</a>
                     <div class="footer-icon">
-                        <a href="https://t.me/woman_safe"><img src="img/tg-icon.png"></a>
-                        <a href="http://vk.com/woman_safe"><img src="img/vk-icon.png"></a>
+                        <a href="https://t.me/woman_safe"><img src="../images/tg-icon.png"></a>
+                        <a href="http://vk.com/woman_safe"><img src="../images/vk-icon.png"></a>
                     </div>
                 </div>
             </div>

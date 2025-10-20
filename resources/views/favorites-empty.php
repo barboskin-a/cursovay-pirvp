@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/favorites-empty.css">
+    <link rel="stylesheet" href="../css/favorites-empty.css">
     <title>Корзина пустая</title>
 </head>
 <body>
@@ -11,16 +11,16 @@
     <header class="nav">
         <div class="container">
             <div class="logo">
-                <a href="index.html"><img src="img/logo.png"></a>
+                <a href="index.php"><img src="../images/logo.png"></a>
             </div>
             <nav class="nav-item">
-                <a class="text" href="index.html">Главная</a>&emsp;
-                <a class="text" href="map.html">Карта</a>&emsp;
-                <a class="text" href="catalog.html">Каталог</a>&emsp;
-                <a class="text" href="resources.html">Ресурсы</a>&emsp;
-                <a class="text" href="about-us.html">О &ensp;нас</a>&emsp;
-                <button><a href="favourites.html"><img src="img/favourit-icon.svg"></a></button>
-                <button><a href="registration.html"><img src="img/log-icon.svg"></a></button>
+                <a class="text" href="index.php">Главная</a>&emsp;
+                <a class="text" href="map.php">Карта</a>&emsp;
+                <a class="text" href="catalog.php">Каталог</a>&emsp;
+                <a class="text" href="resources.php">Ресурсы</a>&emsp;
+                <a class="text" href="about-us.php">О &ensp;нас</a>&emsp;
+                <button><a href="favourites.php"><img src="../images/favourit-icon.svg"></a></button>
+                <button><a href="registration.php"><img src="../images/log-icon.svg"></a></button>
             </nav>
         </div>
     </header>
@@ -44,7 +44,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="resourse-main-img"><img src="img/womanfavourites.png"></div>
+                            <div class="resourse-main-img"><img src="../images/womanfavourites.png"></div>
                         </div>
                     </div>
                 </div>
@@ -55,16 +55,16 @@
         <div class="footer-container">
             <div class="footer-info">
                 <div class="footer-logo">
-                    <img src="img/logo.png">
+                    <img src="../images/logo.png">
                     <p>Сайт проекта “WS”. Все права защищены ©</p>
                 </div>
                 <div class="footer-nav">
                     <h3>Навигация</h3>
-                    <a class="text" href="index.html">Главная</a>
-                    <a class="text" href="map.html">Карта</a>
-                    <a class="text" href="catalog.html">Каталог</a>
-                    <a class="text" href="resources.html">Ресурсы</a>
-                    <a class="text" href="about-us.html">О нас</a>
+                    <a class="text" href="index.php">Главная</a>
+                    <a class="text" href="map.php">Карта</a>
+                    <a class="text" href="catalog.php">Каталог</a>
+                    <a class="text" href="resources.php">Ресурсы</a>
+                    <a class="text" href="about-us.php">О нас</a>
                 </div>
                 <div class="footer-project">
                     <h3>О проекте</h3>
@@ -78,11 +78,11 @@ B%D0%AC%D0%9D%D0%9E%D0%A1%D0%A2%D0%98.pdf">Политика
                 </div>
                 <div class="footer-map">
                     <h3>Карта безопасности</h3>
-                    <a href="map.html">Карта безопасных мест</a>
+                    <a href="map.php">Карта безопасных мест</a>
                     <a href="">Добавить место</a>
                     <div class="footer-icon">
-                        <a href="https://t.me/woman_safe"><img src="img/tg-icon.png"></a>
-                        <a href="http://vk.com/woman_safe"><img src="img/vk-icon.png"></a>
+                        <a href="https://t.me/woman_safe"><img src="../images/tg-icon.png"></a>
+                        <a href="http://vk.com/woman_safe"><img src="../images/vk-icon.png"></a>
                     </div>
                 </div>
             </div>

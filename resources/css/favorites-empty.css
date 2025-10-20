@@ -1,16 +1,16 @@
-/*@font-face {*/
-/*    font-family: "Kiwi Maru Medium";*/
-/*    src: url('../fonts/KiwiMaru-Medium.ttf');*/
-/*}*/
+@font-face {
+    font-family: "Kiwi Maru Medium";
+    src: url('../fonts/KiwiMaru-Medium.ttf');
+}
 
-/*@font-face {*/
-/*    font-family: "AnonymousPro Regular";*/
-/*    src: url('../fonts/AnonymousPro-Regular.ttf');*/
-/*}*/
-/*@font-face {*/
-/*    font-family: "AnonymousPro Bold";*/
-/*    src: url('../fonts/AnonymousPro-Bold.ttf');*/
-/*}*/
+@font-face {
+    font-family: "AnonymousPro Regular";
+    src: url('../fonts/AnonymousPro-Regular.ttf');
+}
+@font-face {
+    font-family: "AnonymousPro Bold";
+    src: url('../fonts/AnonymousPro-Bold.ttf');
+}
 * {
     padding: 0;
     margin: 0;

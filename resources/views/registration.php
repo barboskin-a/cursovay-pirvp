@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet" href="../css/registration.css">
     <title>Регистрация</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="register-and-button">
                     <button type="submit">Зарегистрироваться</button>
-                    <p>Уже есть аккаунт? <a href="login.html">Войти</a></p>
+                    <p>Уже есть аккаунт? <a href="login.php">Войти</a></p>
                 </div>
             </form>
         </section>
