@@ -1,0 +1,105 @@
+/*@font-face {*/
+/*    font-family: "Kiwi Maru Medium";*/
+/*    src: url('../fonts/KiwiMaru-Medium.ttf');*/
+/*}*/
+/*@font-face {*/
+/*    font-family: "AnonymousPro Regular";*/
+/*    src: url('../fonts/AnonymousPro-Regular.ttf');*/
+/*}*/
+/*@font-face {*/
+/*    font-family: "AnonymousPro Bold";*/
+/*    src: url('../fonts/AnonymousPro-Bold.ttf');*/
+/*}*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    margin: 0;
+}
+.wrapper {
+    overflow: hidden;
+}
+main{
+    height: 57rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.forms{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 1px solid #ccc;
+    padding: 3rem;
+    border-radius: 15px;
+}
+h2 {
+    font-family: "AnonymousPro Bold";
+    color: #BB4444;
+    text-align: center;
+}
+form {
+    width: 17rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form-group-set {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+placeholder {
+    color: #ccc;
+}
+option {
+    font-family: 'AnonymousPro Regular';
+}
+.register-and-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    gap: 1rem;
+    line-height: 1.5rem;
+}
+.register-and-button p{
+    font-family: "AnonymousPro Regular";
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.register-and-button a{
+    font-family: "AnonymousPro Regular";
+    font-size: 18px;
+    text-decoration: none;
+}
+.register-and-button button {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'AnonymousPro Regular';
+    background-color: rgba(187, 68, 68, 1);
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.register-and-button button:hover {
+    background-color: rgba(198, 52, 52, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 2px 0 rgb(133, 45, 40);
+}

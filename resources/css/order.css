@@ -1,0 +1,101 @@
+/*@font-face {*/
+/*    font-family: "Kiwi Maru Medium";*/
+/*    src: url('../fonts/KiwiMaru-Medium.ttf');*/
+/*}*/
+/*@font-face {*/
+/*    font-family: "AnonymousPro Regular";*/
+/*    src: url('../fonts/AnonymousPro-Regular.ttf');*/
+/*}*/
+/*@font-face {*/
+/*    font-family: "AnonymousPro Bold";*/
+/*    src: url('../fonts/AnonymousPro-Bold.ttf');*/
+/*}*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    margin: 0;
+}
+.wrapper {
+    overflow: hidden;
+}
+main{
+    height: 65rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.forms{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 1px solid #ccc;
+    padding: 3rem;
+    border-radius: 15px;
+}
+h1 {
+    font-family: "AnonymousPro Bold";
+    color: #BB4444;
+    text-align: center;
+}
+form {
+    max-width: 30rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form-group-set {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+label {
+    display: block;
+    font-family: "AnonymousPro Regular";
+    margin-bottom: 5px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+option {
+    font-family: 'AnonymousPro Regular';
+}
+.sum-and-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.sum-and-button p{
+    font-family: "AnonymousPro Regular";
+    font-size: 20px;
+}
+.sum-and-button span{
+    font-family: "AnonymousPro Bold";
+    font-size: 20px;
+}
+.sum-and-button button {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'AnonymousPro Regular';
+    background-color: rgba(187, 68, 68, 1);
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.sum-and-button button:hover {
+    background-color: rgba(198, 52, 52, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 2px 0 rgb(133, 45, 40);
+}

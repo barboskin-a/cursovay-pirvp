@@ -1,0 +1,328 @@
+/*@font-face {*/
+/*    font-family: "Kiwi Maru Medium";*/
+/*    src: url('../fonts/KiwiMaru-Medium.ttf');*/
+/*}*/
+/*@font-face {*/
+/*    font-family: "AnonymousPro Regular";*/
+/*    src: url('../fonts/AnonymousPro-Regular.ttf');*/
+
+/*    ПРОДОЛЖЕНИЕ ПРИЛОЖЕНИЯ А*/
+/*    215*/
+/*}*/
+/*@font-face {*/
+/*    font-family: "AnonymousPro Bold";*/
+/*    src: url('../fonts/AnonymousPro-Bold.ttf');*/
+/*}*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    margin: 0;
+}
+.wrapper {
+    overflow: hidden;
+}
+.nav {
+    margin: 0 auto;
+    max-width: 95rem;
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.logo img {
+    height: 80%;
+    width: 70%;
+}
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.nav-item a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Kiwi Maru Medium";
+    letter-spacing: -0.1rem;
+}
+.nav-item button {
+    border: none;
+    background-color: #FFF;
+}
+.nav-item button img {
+    width: 85%;
+    height: 85%;
+}
+.main {
+    width: 100%;
+}
+/*ресурсы*/
+.resourse{
+    height: 42rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(214, 211, 211, 0.34);
+}
+.res-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.res-title h2 {
+    font-size: 24px;
+    font-family: "AnonymousPro Bold";
+    color: #BB4444;
+}
+.res-cont {
+    height: 36rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.resourse-contein{
+    background-position: 0 100%;
+    /*background-image: url("../img/leaf.png");*/
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.res-cont-img-leaf{
+    margin-top: 20%;
+    float: left;
+}
+.res-cont-img-leaf img{
+    width: 20rem;
+}
+.resourse-main-img {
+    margin-top: 2%;
+}
+.container-for-resourse{
+    display:flex;
+    align-items: center;
+    gap: 6rem;
+}
+.container-all-text{
+    width: 33rem;
+    height: 22rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+.container-for-text-r{
+    width: 33rem;
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+}
+.cont{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.text-g p{
+    font-size: 15px;
+}
+.text-g span{
+    color: brown;
+}
+.text-g {
+    width: 90%;
+}
+.resourse-main {
+    margin-top: 3%;
+    max-width: 71rem;
+}
+.resourse-main-text {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.resourse p {
+    font-size: 18px;
+    font-family: "AnonymousPro Bold";
+    color: #BB4444;
+}
+.resourse-text {
+    float: left;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    text-align:justify;
+    box-sizing: border-box;
+    height: 18rem;
+    width: 30rem;
+}
+.resourse-text {
+    text-align:justify;
+    box-sizing: border-box;
+    width: 30rem;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 20rem;
+}
+.cont span {
+    font-family: "AnonymousPro Bold";
+    color: #A62C2C;
+    font-size: 23px;
+    float: left;
+    clear: both;
+}
+.cont p {
+    font-family: 'AnonymousPro Regular';
+    color: #000;
+    font-size: 16px;
+    line-height: 2;
+}
+.cont {
+    color: #000;
+}
+/*футтер*/
+.footer {
+    margin: 0 auto;
+    width: 100%;
+    background-color: #fff;
+    height: 12rem;
+    border-top: 1px solid rgba(198, 195, 195, 0.7);
+}
+.footer-container {
+    max-width: 96rem;
+    margin: 0 auto;
+}
+.footer-logo {
+    margin-top: 0.6%;
+    font-family: "AnonymousPro Regular";
+}
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+.footer h3 {
+    line-height: 3rem;
+    font-family: "AnonymousPro Bold";
+}
+.footer a {
+    font-family: "AnonymousPro Regular";
+    line-height: 1.5rem;
+    color: #000;
+    text-decoration: none;
+}
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+}
+.footer-project {
+    display: flex;
+    flex-direction: column;
+}
+.footer-map {
+    display: flex;
+    flex-direction: column;
+}
+.footer-icon {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    gap: 10%;
+}
+.footer-icon img{
+    width: 90%;
+    height: 80%;
+}
+
+@media(max-width: 480px) {
+    .nav-item button img{
+    width: 70%;
+    }
+    .logo img{
+        width: 60%;
+    }
+    .container{
+        max-width: 50rem;
+    }
+    .nav-item a{
+        font-size: 10px;
+    }
+    .nav-item{
+        gap: 0;
+    }
+    .resourse {
+        height: 51rem;
+    }
+    .resourse-contein{
+        height: 35rem;
+        background-size: 40%;
+    }
+    .container-for-text-r{
+        height: 18rem;
+    }
+    .resourse-main-img img {
+        width: 100%;
+    }
+    .res-cont{
+        height: 47rem;
+    }
+    .res-title h2{
+        font-size: 18px;
+    }
+    .cont p {
+        font-size: 16px;
+    }
+    .cont span {
+    font-size: 18px;
+}
+    .container-all-text{
+        flex-wrap: wrap;
+        width: 30rem;
+        gap: 1rem;
+    }
+    .container-for-resourse{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 27rem;
+        height: 30rem;
+    }
+    .footer-container{
+        max-width: 28rem;
+    }
+    .footer-info{
+        font-size: 10px;
+        gap: 2rem;
+    }
+    .footer-logo img{
+        width: 80%;
+    }
+    .footer a{
+        line-height: 1rem;
+    }
+    .footer-nav h3{
+        line-height: 2rem;
+    }
+    .footer h3{
+        line-height: 2rem;
+    }
+}

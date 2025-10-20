@@ -1,0 +1,82 @@
+/*@font-face {*/
+/*    font-family: "Kiwi Maru Medium";*/
+/*    src: url('../fonts/KiwiMaru-Medium.ttf');*/
+/*}*/
+/*@font-face {*/
+/*    font-family: "AnonymousPro Regular";*/
+/*    src: url('../fonts/AnonymousPro-Regular.ttf');*/
+/*}*/
+/*@font-face {*/
+/*    font-family: "AnonymousPro Bold";*/
+/*    src: url('../fonts/AnonymousPro-Bold.ttf');*/
+/*}*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    margin: 0;
+}
+.wrapper {
+    overflow: hidden;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 31rem;
+    margin: 0 auto;
+    border: 1px solid rgba(198, 195, 195, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    font-family: "AnonymousPro Regular";
+    background-color: #f9f9f9;
+}
+.form-constr-compl{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: flex;
+    margin-bottom: 2%;
+}
+select {
+    font-family: "AnonymousPro Regular";
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(198, 195, 195, 0.7);
+    border-radius: 15px;
+}
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+.form-const p{
+    font-size: 22px;
+}
+span{
+    font-family: "AnonymousPro Bold";
+    font-size: 18px;
+}
+button{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'AnonymousPro Regular';
+    background-color: rgba(187, 68, 68, 1);
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgba(198, 52, 52, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 2px 0 rgb(133, 45, 40);
+}
