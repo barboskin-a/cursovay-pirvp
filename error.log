@@ -1,0 +1,1 @@
+[Thu Oct 16 23:22:42.534324 2025] [php:error] [pid 3158129] [client 10.30.8.13:52780] PHP Fatal error:  Uncaught Error: Class "Illuminate\\Foundation\\Auth\\User" not found in /srv/users/xjxgvjnr/cpmficg-m1/app/Models/User.php:10\nStack trace:\n#0 {main}\n  thrown in /srv/users/xjxgvjnr/cpmficg-m1/app/Models/User.php on line 10, referer: http://cpmficg-m1.wsr.ru/app/Models/

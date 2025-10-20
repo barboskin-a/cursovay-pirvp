@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class Admin extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
@@ -17,12 +17,13 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
-    protected $primaryKey = 'id_user';
+    protected $primaryKey = 'id_admin';
     protected $fillable = [
         'name',
         'email',
         'password',
-        'id_order'
+        'order',
+        'id_admin_rights'
     ];
 
     /**
