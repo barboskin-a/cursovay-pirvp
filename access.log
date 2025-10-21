@@ -2086,3 +2086,8 @@
 10.30.8.118 - - [20/Oct/2025:19:50:06 -0700] "GET /resources/css/registration.css HTTP/1.1" 200 991 "http://cpmficg-m1.wsr.ru/resources/views/registration.php" "Mozilla/5.0 (X11; Linux x86_64; rv:143.0) Gecko/20100101 Firefox/143.0"
 10.30.8.118 - - [20/Oct/2025:19:50:08 -0700] "GET /resources/views/login.php HTTP/1.1" 200 734 "http://cpmficg-m1.wsr.ru/resources/views/registration.php" "Mozilla/5.0 (X11; Linux x86_64; rv:143.0) Gecko/20100101 Firefox/143.0"
 10.30.8.118 - - [20/Oct/2025:19:50:08 -0700] "GET /resources/css/login.css HTTP/1.1" 200 1006 "http://cpmficg-m1.wsr.ru/resources/views/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:143.0) Gecko/20100101 Firefox/143.0"
+10.30.8.118 - - [20/Oct/2025:21:32:04 -0700] "GET / HTTP/1.1" 200 1018 "http://wsr.ru/" "Mozilla/5.0 (X11; Linux x86_64; rv:143.0) Gecko/20100101 Firefox/143.0"
+10.30.8.118 - - [20/Oct/2025:21:32:06 -0700] "GET /resources/ HTTP/1.1" 200 767 "http://cpmficg-m1.wsr.ru/" "Mozilla/5.0 (X11; Linux x86_64; rv:143.0) Gecko/20100101 Firefox/143.0"
+10.30.8.118 - - [20/Oct/2025:21:32:07 -0700] "GET /resources/views/ HTTP/1.1" 200 3034 "http://cpmficg-m1.wsr.ru/resources/" "Mozilla/5.0 (X11; Linux x86_64; rv:143.0) Gecko/20100101 Firefox/143.0"
+10.30.8.118 - - [20/Oct/2025:21:32:07 -0700] "GET /resources/images/message_icon.png HTTP/1.1" 200 2595 "http://cpmficg-m1.wsr.ru/resources/views/" "Mozilla/5.0 (X11; Linux x86_64; rv:143.0) Gecko/20100101 Firefox/143.0"
+10.30.8.118 - - [20/Oct/2025:21:33:09 -0700] "GET / HTTP/1.1" 200 1021 "http://wsr.ru/" "Mozilla/5.0 (X11; Linux x86_64; rv:143.0) Gecko/20100101 Firefox/143.0"

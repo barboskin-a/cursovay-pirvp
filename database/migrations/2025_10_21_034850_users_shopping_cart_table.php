@@ -12,13 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users_shopping_cart', function (Blueprint $table) {
-            $table->id_shopping_cart()->primary();
+            $table->id();
             $table->foreignId('id_user');
             $table->foreignId('id_product');
             $table->integer('quantity_product');
             $table->integer('amount_to_pay');
-            $table->rememberToken();
-            $table->timestamps();
         });
     }
 

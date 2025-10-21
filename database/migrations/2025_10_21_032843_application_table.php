@@ -12,13 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('application', function (Blueprint $table) {
-            $table->id_application()->primary();
+            $table->id();
             $table->string('name');
             $table->date('date_of_incident');
             $table->time('time_of_incident');
             $table->string('description');
-            $table->rememberToken();
-            $table->timestamps();
         });
     }
 

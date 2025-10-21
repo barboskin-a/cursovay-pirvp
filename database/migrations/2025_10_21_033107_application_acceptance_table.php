@@ -12,12 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('application_acceptance', function (Blueprint $table) {
-            $table->id_application_acceptance()->primary();
+            $table->id();
             $table->foreignId('id_application');
-            $table->foreignId('id_admin');
             $table->foreignId('id_user');
-            $table->rememberToken();
-            $table->timestamps();
         });
     }
 
