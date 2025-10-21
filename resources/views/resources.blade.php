@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/resources.css">
+    <link rel="stylesheet" href="../../public/css/resources.css">
     <title>Ресурсы</title>
 </head>
 <body>
@@ -11,7 +11,7 @@
     <header class="nav">
         <div class="container">
             <div class="logo">
-                <a href="index.php"><img src="../images/logo.png"></a>
+                <a href="index.php"><img src="../../public/images/logo.png"></a>
             </div>
             <nav class="nav-item">
                 <a class="text" href="index.php">Главная</a>&emsp;
@@ -19,8 +19,8 @@
                 <a class="text" href="catalog.php">Каталог</a>&emsp;
                 <a class="text" href="resources.php">Ресурсы</a>&emsp;
                 <a class="text" href="about-us.php">О &ensp;нас</a>&emsp;
-                <button><a href="favourites.php" ><img src="../images/favourit-icon.svg"></a></button>
-                <button><a href="registration.php"><img src="../images/log-icon.svg"></a></button>
+                <button><a href="favourites.php" ><img src="../../public/images/favourit-icon.svg"></a></button>
+                <button><a href="registration.php"><img src="../../public/images/log-icon.svg"></a></button>
             </nav>
         </div>
     </header>
@@ -61,7 +61,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="resourse-main-img"> <img src="../images/woman-leaves.png"></div>
+                            <div class="resourse-main-img"> <img src="../../public/images/woman-leaves.png"></div>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
         <div class="footer-container">
             <div class="footer-info">
                 <div class="footer-logo">
-                    <img src="../images/logo.png">
+                    <img src="../../public/images/logo.png">
                     <p>Сайт проекта “WS”. Все права защищены ©</p>
                 </div>
                 <div class="footer-nav">
@@ -98,8 +98,8 @@ B%D0%AC%D0%9D%D0%9E%D0%A1%D0%A2%D0%98.pdf">Политика
                     <a href="map.php">Карта безопасных мест</a>
                     <a href="">Добавить место</a>
                     <div class="footer-icon">
-                        <a href="https://t.me/woman_safe"><img src="../images/tg-icon.png"></a>
-                        <a href="http://vk.com/woman_safe"><img src="../images/vk-icon.png"></a>
+                        <a href="https://t.me/woman_safe"><img src="../../public/images/tg-icon.png"></a>
+                        <a href="http://vk.com/woman_safe"><img src="../../public/images/vk-icon.png"></a>
                     </div>
                 </div>
             </div>
@@ -108,5 +108,3 @@ B%D0%AC%D0%9D%D0%9E%D0%A1%D0%A2%D0%98.pdf">Политика
 </div>
 </body>
 </html>
-
-<?php

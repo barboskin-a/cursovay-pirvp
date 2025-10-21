@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/catalog.css">
+    <link rel="stylesheet" href="../../public/css/catalog.css">
     <title>Каталог</title>
 </head>
 <body>
@@ -11,7 +11,7 @@
     <header class="nav">
         <div class="container">
             <div class="logo">
-                <a href="index.php"><img src="../images/logo.png"></a>
+                <a href="index.php"><img src="../../public/images/logo.png"></a>
             </div>
             <nav class="nav-item">
                 <a class="text" href="index.php">Главная</a>&emsp;
@@ -19,8 +19,8 @@
                 <a class="text" href="catalog.php">Каталог</a>&emsp;
                 <a class="text" href="resources.php">Ресурсы</a>&emsp;
                 <a class="text" href="about-us.php">О &ensp;нас</a>&emsp;
-                <button><a href="favourites.php"><img src="../images/favourit-icon.svg"></a></button>
-                <button><a href="registration.php"><img src="../images/log-icon.svg"></a></button>
+                <button><a href="favourites.php"><img src="../../public/images/favourit-icon.svg"></a></button>
+                <button><a href="registration.php"><img src="../../public/images/log-icon.svg"></a></button>
             </nav>
         </div>
     </header>
@@ -37,7 +37,7 @@
                 <div class="catalog-cards">
                     <article>
                         <div class="catalog-img-card">
-                            <img src="../images/product1.png" alt="photo">
+                            <img src="../../public/images/product1.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -49,7 +49,7 @@
                                     </div>
                                     <div class="items">
                                         <span>1990₽</span>
-                                        <button><img src="../images/favourit-icon.svg"></button>
+                                        <button><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@
                     </article>
                     <article>
                         <div class="catalog-img-card">
-                            <img src="../images/product2.png" alt="photo">
+                            <img src="../../public/images/product2.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -69,7 +69,7 @@
                                     </div>
                                     <div class="items">
                                         <span>1990₽</span>
-                                        <button><img src="../images/favourit-icon.svg"></button>
+                                        <button><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -77,7 +77,7 @@
                     </article>
                     <article>
                         <div class="catalog-img-card">
-                            <img src="../images/product3.png" alt="photo">
+                            <img src="../../public/images/product3.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -89,7 +89,7 @@
                                     </div>
                                     <div class="items">
                                         <span>1099₽</span>
-                                        <button><img src="../images/favourit-icon.svg"></button>
+                                        <button><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +97,7 @@
                     </article>
                     <article>
                         <div class="catalog-img-card">
-                            <img src="../images/product4.png" alt="photo">
+                            <img src="../../public/images/product4.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -112,7 +112,7 @@
                                             <span>699₽</span>
                                             <p>999₽</p>
                                         </div>
-                                        <button><img src="../images/favourit-icon.svg"></button>
+                                        <button><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -126,7 +126,7 @@
                 <div class="catalog-cards">
                     <article>
                         <div class="catalog-img-card">
-                            <img src="../images/product5.png" alt="photo">
+                            <img src="../../public/images/product5.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -138,7 +138,7 @@
                                     </div>
                                     <div class="items">
                                         <span>1099₽</span>
-                                        <button><img src="../images/favourit-icon.svg"></button>
+                                        <button><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -146,7 +146,7 @@
                     </article>
                     <article>
                         <div class="catalog-img-card">
-                            <img src="../images/product6.png" alt="photo">
+                            <img src="../../public/images/product6.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -158,7 +158,7 @@
                                     </div>
                                     <div class="items">
                                         <span>2699₽</span>
-                                        <button><img src="../images/favourit-icon.svg"></button>
+                                        <button><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -166,7 +166,7 @@
                     </article>
                     <article>
                         <div class="catalog-img-card">
-                            <img src="../images/product7.png" alt="photo">
+                            <img src="../../public/images/product7.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -178,7 +178,7 @@
                                     </div>
                                     <div class="items">
                                         <span>1099₽</span>
-                                        <button><img src="../images/favourit-icon.svg"></button>
+                                        <button><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -186,7 +186,7 @@
                     </article>
                     <article>
                         <div class="catalog-img-card">
-                            <img src="../images/product8.png" alt="photo">
+                            <img src="../../public/images/product8.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -200,7 +200,7 @@
                                         <div>
                                             <span>2799₽</span>
                                         </div>
-                                        <button><img src="../images/in-favourit.svg"></button>
+                                        <button><img src="../../public/images/in-favourit.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -214,7 +214,7 @@
         <div class="footer-container">
             <div class="footer-info">
                 <div class="footer-logo">
-                    <img src="../images/logo.png">
+                    <img src="../../public/images/logo.png">
                     <p>Сайт проекта “WS”. Все права защищены ©</p>
                 </div>
                 <div class="footer-nav">
@@ -240,8 +240,8 @@ B%D0%AC%D0%9D%D0%9E%D0%A1%D0%A2%D0%98.pdf">Политика
                     <a href="map.php">Карта безопасных мест</a>
                     <a href="https://t.me/woman_safe">Добавить место</a>
                     <div class="footer-icon">
-                        <a href="https://t.me/woman_safe"><img src="../images/tg-icon.png"></a>
-                        <a href="http://vk.com/woman_safe"><img src="../images/vk-icon.png"></a>
+                        <a href="https://t.me/woman_safe"><img src="../../public/images/tg-icon.png"></a>
+                        <a href="http://vk.com/woman_safe"><img src="../../public/images/vk-icon.png"></a>
                     </div>
                 </div>
             </div>
@@ -250,4 +250,3 @@ B%D0%AC%D0%9D%D0%9E%D0%A1%D0%A2%D0%98.pdf">Политика
 </div>
 </body>
 </html>
-<?php

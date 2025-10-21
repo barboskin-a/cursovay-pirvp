@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/style.css">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <title>Woman Safe</title>
 </head>
 <body>
@@ -11,28 +11,28 @@
     <header class="nav">
         <div class="container">
             <div class="logo">
-                <a href="index.php"><img src="../images/logo.png"></a>
+                <a href="{{route('index')}}"><img src="../../public/images/logo.png"></a>
             </div>
             <nav class="nav-item">
-                <a class="text" href="index.php">Главная</a>&emsp;
-                <a class="text" href="map.php">Карта</a>&emsp;
+                <a class="text" href="{{route('index')}}">Главная</a>&emsp;
+                <a class="text" href="{{route('map')}}">Карта</a>&emsp;
                 <a class="text" href="catalog.php">Каталог</a>&emsp;
                 <a class="text" href="resources.php">Ресурсы</a>&emsp;
                 <a class="text" href="about-us.php">О &ensp;нас</a>&emsp;
-                <button><a href="favourites.php"><img src="../images/favourit-icon.svg"></a></button>
-                <button><a href="registration.php"><img src="../images/log-icon.svg"></a></button>
+                <button><a href="favourites.php"><img src="../../public/images/favourit-icon.svg"></a></button>
+                <button><a href="registration.php"><img src="../../public/images/log-icon.svg"></a></button>
             </nav>
         </div>
     </header>
     <main>
         <section class="preview">
-            <img src="../images/preview.png">
-            <button><img src="../images/message_icon.png">Вступить в коммьюнити</button>
+            <img src="../../public/images/preview.png">
+            <button><img src="../../public/images/message_icon.png">Вступить в коммьюнити</button>
         </section>
         <section class="map">
             <div class="map-main">
                 <div class="interactive-map">
-                    <img src="../images/butterfly.png">
+                    <img src="../../public/images/butterfly.png">
                     <script type="text/javascript" charset="utf-8" async
                             src="https://apimaps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A473d2b64f2a91950e979354456
 c3faf6a5141dd5d5662fe0940f4de511ea7b3c&amp;width=534&amp;height=316&amp;lang=ru_
@@ -52,7 +52,7 @@ RU&amp;scroll=true"></script>
                             мы сможем сделать большой шаг к справедливому и равному
                             обществу!</p>
                         <div class="map-button">
-                            <img src="../images/butterfly.png">
+                            <img src="../../public/images/butterfly.png">
                             <button type="button"><a href="map.php">Карта
                                     безопасности</a></button>
                         </div>
@@ -72,7 +72,7 @@ RU&amp;scroll=true"></script>
                 <div class="catalog-cards">
                     <article>
                         <div class="catalog-img-card">
-                            <img src="../images/product1.png" alt="photo">
+                            <img src="../../public/images/product1.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -84,7 +84,7 @@ RU&amp;scroll=true"></script>
                                     </div>
                                     <div class="items">
                                         <span>1990₽</span>
-                                        <button><img src="../images/favourit-icon.svg"></button>
+                                        <button><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@ RU&amp;scroll=true"></script>
                     </article>
                     <article>
                         <div class="catalog-img-card">
-                            <img src="../images/product2.png" alt="photo">
+                            <img src="../../public/images/product2.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -104,7 +104,7 @@ RU&amp;scroll=true"></script>
                                     </div>
                                     <div class="items">
                                         <span>1990₽</span>
-                                        <button><img src="../images/favourit-icon.svg"></button>
+                                        <button><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@ RU&amp;scroll=true"></script>
                     </article>
                     <article>
                         <div class="catalog-img-card">
-                            <img src="../images/product3.png" alt="photo">
+                            <img src="../../public/images/product3.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -124,7 +124,7 @@ RU&amp;scroll=true"></script>
                                     </div>
                                     <div class="items">
                                         <span>1099₽</span>
-                                        <button><img src="../images/favourit-icon.svg"></button>
+                                        <button><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -132,7 +132,7 @@ RU&amp;scroll=true"></script>
                     </article>
                     <article>
                         <div class="catalog-img-card">
-                            <img src="../images/product4.png" alt="photo">
+                            <img src="../../public/images/product4.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
@@ -147,7 +147,7 @@ RU&amp;scroll=true"></script>
                                             <span>699₽</span>
                                             <p>999₽</p>
                                         </div>
-                                        <button><img src="../images/favourit-icon.svg"></button>
+                                        <button><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -179,7 +179,7 @@ RU&amp;scroll=true"></script>
                             <div class="button-r"><button><a class="button"
                                                              href="resources.php">Подробнее</a></button></div>
                         </div>
-                        <div class="resourse-main-img"> <img src="../images/woman-leaves.png"></div>
+                        <div class="resourse-main-img"> <img src="../../public/images/woman-leaves.png"></div>
                     </div>
                 </div>
             </div>
@@ -189,7 +189,7 @@ RU&amp;scroll=true"></script>
                 <p>О нас</p>
                 <div class="about-us-main">
                     <div class="about-us-main-img">
-                        <img src="../images/woman-fly.png">
+                        <img src="../../public/images/woman-fly.png">
                     </div>
                     <div class="about-us-main-text">
                         <div class="about-us-text">
@@ -217,7 +217,7 @@ RU&amp;scroll=true"></script>
         <div class="footer-container">
             <div class="footer-info">
                 <div class="footer-logo">
-                    <img src="../images/logo.png">
+                    <img src="../../public/images/logo.png">
                     <p>Сайт проекта “WS”. Все права защищены ©</p>
                 </div>
                 <div class="footer-nav">
@@ -246,8 +246,8 @@ B%D0%AC%D0%9D%D0%9E%D0%A1%D0%A2%D0%98.pdf">Политика
                     <a href="map.php">Карта безопасных мест</a>
                     <a href="">Добавить место</a>
                     <div class="footer-icon">
-                        <a href="https://t.me/woman_safe"><img src="../images/tg-icon.png"></a>
-                        <a href="http://vk.com/woman_safe"><img src="../images/vk-icon.png"></a>
+                        <a href="https://t.me/woman_safe"><img src="../../public/images/tg-icon.png"></a>
+                        <a href="http://vk.com/woman_safe"><img src="../../public/images/vk-icon.png"></a>
                     </div>
                 </div>
             </div>
@@ -256,4 +256,3 @@ B%D0%AC%D0%9D%D0%9E%D0%A1%D0%A2%D0%98.pdf">Политика
 </div>
 </body>
 </html>
-<?php

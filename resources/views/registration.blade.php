@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/registration.css">
+    <link rel="stylesheet" href="../../public/css/registration.css">
     <title>Регистрация</title>
 </head>
 <body>
@@ -33,5 +33,3 @@
 </div>
 </body>
 </html>
-
-<?php

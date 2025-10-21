@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Application_acceptance extends Model
 {
-    //
+    protected $fillable = [
+        'id_application',
+        'id_user'
+    ];
 }

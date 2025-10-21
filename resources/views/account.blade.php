@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../../public/css/account.css">
     <title>Личный кабинет</title>
 </head>
 <body>
@@ -11,7 +11,7 @@
     <header class="nav">
         <div class="container">
             <div class="logo">
-                <a href="index.php"><img src="../images/logo.png"></a>
+                <a href="index.php"><img src="../../public/images/logo.png"></a>
             </div>
             <nav class="nav-item">
                 <a class="text" href="index.php">Главная</a>&emsp;
@@ -19,8 +19,8 @@
                 <a class="text" href="catalog.php">Каталог</a>&emsp;
                 <a class="text" href="resources.php">Ресурсы</a>&emsp;
                 <a class="text" href="about-us.php">О &ensp;нас</a>&emsp;
-                <button><a href="favourites.php"><img src="../images/favourit-icon.svg"></a></button>
-                <button><a href="registration.php"><img src="../images/log-icon.svg"></a></button>
+                <button><a href="favourites.php"><img src="../../public/images/favourit-icon.svg"></a></button>
+                <button><a href="registration.php"><img src="../../public/images/log-icon.svg"></a></button>
             </nav>
         </div>
     </header>
@@ -61,7 +61,7 @@
                     </form>
                 </div>
                 <div class="account-img">
-                    <img src="../images/woman-fly.png">
+                    <img src="../../public/images/woman-fly.png">
                 </div>
             </div>
             <div class="block">
@@ -72,18 +72,18 @@
                             <p>Ваш голос имеет значение, и вместе мы можем<br>сделать мир
                                 безопаснее.</p>
                         </div>
-                        <img src="../images/leaf.png">
+                        <img src="../../public/images/leaf.png">
                     </div>
                     <div class="qr">
-                        <img src="../images/QR.png">
+                        <img src="../../public/images/QR.png">
                     </div>
                     <div class="cont-bat">
                         <div class="blok-img-butterfly">
-                            <img src="../images/butterfly.png">
+                            <img src="../../public/images/butterfly.png">
                         </div>
                         <div class="img-leaf">
                             <div class="img-bottom-leaf">
-                                <img src="../images/leaf%20and%20fly%20about-us.png">
+                                <img src="../../public/images/leaf%20and%20fly%20about-us.png">
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
         <div class="footer-container">
             <div class="footer-info">
                 <div class="footer-logo">
-                    <img src="../images/logo.png">
+                    <img src="../../public/images/logo.png">
                     <p>Сайт проекта “WS”. Все права защищены ©</p>
                 </div>
                 <div class="footer-nav">
@@ -121,8 +121,8 @@ B%D0%AC%D0%9D%D0%9E%D0%A1%D0%A2%D0%98.pdf">Политика
                     <a href="map.php">Карта безопасных мест</a>
                     <a href="">Добавить место</a>
                     <div class="footer-icon">
-                        <a href="https://t.me/woman_safe"><img src="../images/tg-icon.png"></a>
-                        <a href="http://vk.com/woman_safe"><img src="../images/vk-icon.png"></a>
+                        <a href="https://t.me/woman_safe"><img src="../../public/images/tg-icon.png"></a>
+                        <a href="http://vk.com/woman_safe"><img src="../../public/images/vk-icon.png"></a>
                     </div>
                 </div>
             </div>
@@ -131,5 +131,3 @@ B%D0%AC%D0%9D%D0%9E%D0%A1%D0%A2%D0%98.pdf">Политика
 </div>
 </body>
 </html>
-
-<?php

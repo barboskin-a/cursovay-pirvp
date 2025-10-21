@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/favorites-empty.css">
-    <title>Корзина пустая</title>
+    <link rel="stylesheet" href="../../public/css/map.css">
+    <title>Карта безопасности</title>
 </head>
 <body>
 <div class="wrapper">
     <header class="nav">
         <div class="container">
             <div class="logo">
-                <a href="index.php"><img src="../images/logo.png"></a>
+                <a href="index.php"><img src="../../public/images/logo.png"></a>
             </div>
             <nav class="nav-item">
                 <a class="text" href="index.php">Главная</a>&emsp;
@@ -19,33 +19,26 @@
                 <a class="text" href="catalog.php">Каталог</a>&emsp;
                 <a class="text" href="resources.php">Ресурсы</a>&emsp;
                 <a class="text" href="about-us.php">О &ensp;нас</a>&emsp;
-                <button><a href="favourites.php"><img src="../images/favourit-icon.svg"></a></button>
-                <button><a href="registration.php"><img src="../images/log-icon.svg"></a></button>
+                <button><a href="favourites.php" ><img src="../../public/images/favourit-icon.svg"></a></button>
+                <button><a href="registration.php"><img src="../../public/images/log-icon.svg"></a></button>
             </nav>
         </div>
     </header>
     <main>
-        <section class="resourse">
-            <div class="res-cont">
-                <div class="res-title">
-                    <h2>Корзина</h2>
+        <section class="map">
+            <div class="map-main">
+                <div class="interactive-map">
+                    <script type="text/javascript" charset="utf-8" async
+                            src="https://apimaps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A473d2b64f2a91950e979354456
+c3faf6a5141dd5d5662fe0940f4de511ea7b3c&amp;width=534&amp;height=316&amp;lang=ru_
+RU&amp;scroll=true"></script>
                 </div>
-                <div class="resourse-contein">
-                    <div class="res-img-text">
-                        <div class="container-for-resourse">
-                            <div class="container-all-text">
-                                <div class="container-for-text-r">
-                                    <div class="cont">
-                                        <div class="text-s"><p>Похоже, вы еще не добавили ни одного
-                                                товара в
-                                                корзину </p>
-                                            <p>Перейдите в каталог, чтобы выбрать товар</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="resourse-main-img"><img src="../images/womanfavourites.png"></div>
-                        </div>
+                <div class="map-button">
+                    <div class="map-button1">
+                        <button><a href="https://t.me/woman_safe">Добавить место</a></button>
+                    </div>
+                    <div class="map-button2">
+                        <button>Сообщить об ошибке</button>
                     </div>
                 </div>
             </div>
@@ -55,16 +48,16 @@
         <div class="footer-container">
             <div class="footer-info">
                 <div class="footer-logo">
-                    <img src="../images/logo.png">
+                    <img src="../../public/images/logo.png">
                     <p>Сайт проекта “WS”. Все права защищены ©</p>
                 </div>
                 <div class="footer-nav">
                     <h3>Навигация</h3>
-                    <a class="text" href="index.php">Главная</a>
-                    <a class="text" href="map.php">Карта</a>
-                    <a class="text" href="catalog.php">Каталог</a>
-                    <a class="text" href="resources.php">Ресурсы</a>
-                    <a class="text" href="about-us.php">О нас</a>
+                    <a class="link" href="index.php">Главная</a>
+                    <a class="link" href="map.php">Карта</a>
+                    <a class="link" href="catalog.php">Каталог</a>
+                    <a class="link" href="resources.php">Ресурсы</a>
+                    <a class="link" href="about-us.php">О нас</a>
                 </div>
                 <div class="footer-project">
                     <h3>О проекте</h3>
@@ -79,10 +72,10 @@ B%D0%AC%D0%9D%D0%9E%D0%A1%D0%A2%D0%98.pdf">Политика
                 <div class="footer-map">
                     <h3>Карта безопасности</h3>
                     <a href="map.php">Карта безопасных мест</a>
-                    <a href="">Добавить место</a>
+                    <a href="https://t.me/woman_safe">Добавить место</a>
                     <div class="footer-icon">
-                        <a href="https://t.me/woman_safe"><img src="../images/tg-icon.png"></a>
-                        <a href="http://vk.com/woman_safe"><img src="../images/vk-icon.png"></a>
+                        <a href="https://t.me/woman_safe"><img src="../../public/images/tg-icon.png"></a>
+                        <a href="http://vk.com/woman_safe"><img src="../../public/images/vk-icon.png"></a>
                     </div>
                 </div>
             </div>
@@ -91,5 +84,3 @@ B%D0%AC%D0%9D%D0%9E%D0%A1%D0%A2%D0%98.pdf">Политика
 </div>
 </body>
 </html>
-
-<?php

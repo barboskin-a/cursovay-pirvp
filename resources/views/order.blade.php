@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/order.css">
+    <link rel="stylesheet" href="../../public/css/order.css">
     <title>Оформление заказа</title>
 </head>
 <body>
@@ -72,4 +72,3 @@
 </body>
 </html>
 
-<?php

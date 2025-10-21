@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../../public/css/login.css">
     <title>Вход</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
                 <div class="login-and-button">
                     <button type="submit">Войти</button>
                     <p>Еще нет аккаунта? <a
-                            href="registration.php">Зарегистрироваться</a></p>
+                                href="registration.php">Зарегистрироваться</a></p>
                 </div>
             </form>
         </section>
@@ -30,5 +30,3 @@
 </div>
 </body>
 </html>
-
-<?php
