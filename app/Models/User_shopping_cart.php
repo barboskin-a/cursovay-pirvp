@@ -12,4 +12,12 @@ class User_shopping_cart extends Model
         'quantity_product',
         'amount_to_pay'
     ];
+
+    public function user() {
+        return $this->belongsTo(User::class, 'id_user');
+    }
+
+    public function product() {
+        return $this->belongsTo(Product::class, 'id_product');
+    }
 }

@@ -12,4 +12,12 @@ class Order extends Model
     'order_sum',
     'delivery'
 ];
+    public function product() {
+        return $this->belongsTo(Product::class, 'id_product');
+    }
+
+    public function user()
+    {
+        return $this->hasMany(User::class);
+    }
 }

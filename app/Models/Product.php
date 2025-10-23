@@ -15,4 +15,14 @@ class Product extends Model
         'description',
         'component_of_the_product'
     ];
+
+    public function order()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public function user_shopping_cart()
+    {
+        return $this->hasMany(User_shopping_cart::class);
+    }
 }

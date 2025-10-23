@@ -12,4 +12,9 @@ class Application extends Model
         'time_of_incident',
         'description'
     ];
+
+    public function application_acceptance()
+    {
+        return $this->hasMany(Application_Acceptance::class);
+    }
 }

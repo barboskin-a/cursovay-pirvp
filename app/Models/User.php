@@ -22,4 +22,17 @@ class User extends Authenticatable
     ];
     protected $primaryKey = 'id_user';
 
+    public function application_acceptance()
+    {
+        return $this->hasMany(Application_Acceptance::class);
+    }
+
+    public function order() {
+        return $this->belongsTo(Order::class, 'id_order');
+    }
+
+    public function user_shopping_cart()
+    {
+        return $this->hasMany(User_shopping_cart::class);
+    }
 }
