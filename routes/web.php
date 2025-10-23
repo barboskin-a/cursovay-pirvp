@@ -61,3 +61,5 @@ Route::get('/order', function () {
 Route::get('/registration', function () {
     return view('registration');
 })->name('registration');
+
+Route::post('/registration', [\App\Http\Controllers\UserController::class, 'registration'])->name('');

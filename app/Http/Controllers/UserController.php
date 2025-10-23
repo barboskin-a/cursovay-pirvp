@@ -13,5 +13,7 @@ class UserController extends Controller
         $user->email=$request->input('email'); //в модели юзера поле имейл будет иметь то значение, которое получили из реквеста
         $user->password=$request->input('password');
         $user->returnPassword=$request->input('returnPassword');
+        $user->save();
+        return redirect('/login');
     }
 }
