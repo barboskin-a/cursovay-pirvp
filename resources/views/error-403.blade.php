@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../public/css/error-403.css">
+    <link href="{{ asset('css/error-403.css') }}" rel="stylesheet">
     <title>Карта безопасности</title>
 </head>
 <body>
@@ -11,16 +11,16 @@
     <header class="nav">
         <div class="container">
             <div class="logo">
-                <a href="index.php"><img src="../../public/images/logo.png"></a>
+                <a href="{{route('index')}}"><img src="../../public/images/logo.png"></a>
             </div>
             <nav class="nav-item">
-                <a class="text" href="index.php">Главная</a>&emsp;
-                <a class="text" href="map.php">Карта</a>&emsp;
-                <a class="text" href="catalog.php">Каталог</a>&emsp;
-                <a class="text" href="resources.php">Ресурсы</a>&emsp;
-                <a class="text" href="about-us.php">О &ensp;нас</a>&emsp;
-                <button><a href="favourites.php"><img src="../../public/images/favourit-icon.svg"></a></button>
-                <button><a href="registration.php"><img src="../../public/images/log-icon.svg"></a></button>
+                <a class="text" href="{{route('index')}}">Главная</a>&emsp;
+                <a class="text" href="{{route('map')}}">Карта</a>&emsp;
+                <a class="text" href="{{route('catalog')}}">Каталог</a>&emsp;
+                <a class="text" href="{{route('resources')}}">Ресурсы</a>&emsp;
+                <a class="text" href="{{route('about-us')}}">О &ensp;нас</a>&emsp;
+                <button><a href="{{route('favourites')}}"><img src="../../public/images/favourit-icon.svg"></a></button>
+                <button><a href="{{route('registration')}}"><img src="../../public/images/log-icon.svg"></a></button>
             </nav>
         </div>
     </header>
@@ -45,7 +45,7 @@
                         <p>Доступ к странице запрещен</p>
                     </div>
                     <div class="error-button">
-                        <button><a href="index.php">Вернуться на главную</a></button>
+                        <button><a href="{{route('index')}}">Вернуться на главную</a></button>
                     </div>
                 </div>
                 <div class="error-img-cont-2">

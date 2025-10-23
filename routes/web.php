@@ -21,3 +21,43 @@ Route::get('/resources', function () {
 Route::get('/about-us', function () {
     return view('about-us');
 })->name('about-us');
+
+Route::get('/account', function () {
+    return view('account');
+})->name('account');
+
+Route::get('/designer-product', function () {
+    return view('designer-product');
+})->name('designer-product');
+
+Route::get('/error-403', function () {
+    return view('error-403');
+})->name('error-403');
+
+Route::get('/error-404', function () {
+    return view('error-404');
+})->name('error-404');
+
+Route::get('/error-500', function () {
+    return view('error-500');
+})->name('error-500');
+
+Route::get('/favourites', function () {
+    return view('favourites');
+})->name('favourites');
+
+Route::get('/favourites-empty', function () {
+    return view('favourites-empty');
+})->name('favourites-empty');
+
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+
+Route::get('/order', function () {
+    return view('order');
+})->name('order');
+
+Route::get('/registration', function () {
+    return view('registration');
+})->name('registration');

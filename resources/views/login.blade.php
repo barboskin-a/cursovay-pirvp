@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../public/css/login.css">
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     <title>Вход</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
                 <div class="login-and-button">
                     <button type="submit">Войти</button>
                     <p>Еще нет аккаунта? <a
-                                href="registration.php">Зарегистрироваться</a></p>
+                                href="{{route('registration')}}">Зарегистрироваться</a></p>
                 </div>
             </form>
         </section>

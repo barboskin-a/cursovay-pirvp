@@ -1,12 +1,9 @@
-<div>
-    <!-- It is quality rather than quantity that matters. - Lucius Annaeus Seneca -->
-</div>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../public/css/favorites-empty.css">
+    <link href="{{ asset('css/favorites-empty.css') }}" rel="stylesheet">
     <title>Корзина пустая</title>
 </head>
 <body>
@@ -14,16 +11,16 @@
     <header class="nav">
         <div class="container">
             <div class="logo">
-                <a href="index.php"><img src="../../public/images/logo.png"></a>
+                <a href="{{route('index')}}"><img src="../../public/images/logo.png"></a>
             </div>
             <nav class="nav-item">
-                <a class="text" href="index.php">Главная</a>&emsp;
-                <a class="text" href="map.php">Карта</a>&emsp;
-                <a class="text" href="catalog.php">Каталог</a>&emsp;
-                <a class="text" href="resources.php">Ресурсы</a>&emsp;
-                <a class="text" href="about-us.php">О &ensp;нас</a>&emsp;
-                <button><a href="favourites.php"><img src="../../public/images/favourit-icon.svg"></a></button>
-                <button><a href="registration.php"><img src="../../public/images/log-icon.svg"></a></button>
+                <a class="text" href="{{route('index')}}">Главная</a>&emsp;
+                <a class="text" href="{{route('map')}}">Карта</a>&emsp;
+                <a class="text" href="{{route('catalog')}}">Каталог</a>&emsp;
+                <a class="text" href="{{route('resources')}}">Ресурсы</a>&emsp;
+                <a class="text" href="{{route('about-us')}}">О &ensp;нас</a>&emsp;
+                <button><a href="{{route('favourites')}}"><img src="../../public/images/favourit-icon.svg"></a></button>
+                <button><a href="{{route('registration')}}"><img src="../../public/images/log-icon.svg"></a></button>
             </nav>
         </div>
     </header>
@@ -63,11 +60,11 @@
                 </div>
                 <div class="footer-nav">
                     <h3>Навигация</h3>
-                    <a class="text" href="index.php">Главная</a>
-                    <a class="text" href="map.php">Карта</a>
-                    <a class="text" href="catalog.php">Каталог</a>
-                    <a class="text" href="resources.php">Ресурсы</a>
-                    <a class="text" href="about-us.php">О нас</a>
+                    <a class="text" href="{{route('index')}}">Главная</a>
+                    <a class="text" href="{{route('map')}}">Карта</a>
+                    <a class="text" href="{{route('catalog')}}">Каталог</a>
+                    <a class="text" href="{{route('resources')}}">Ресурсы</a>
+                    <a class="text" href="{{route('about-us')}}">О нас</a>
                 </div>
                 <div class="footer-project">
                     <h3>О проекте</h3>
@@ -81,7 +78,7 @@ B%D0%AC%D0%9D%D0%9E%D0%A1%D0%A2%D0%98.pdf">Политика
                 </div>
                 <div class="footer-map">
                     <h3>Карта безопасности</h3>
-                    <a href="map.php">Карта безопасных мест</a>
+                    <a href="{{route('map')}}">Карта безопасных мест</a>
                     <a href="">Добавить место</a>
                     <div class="footer-icon">
                         <a href="https://t.me/woman_safe"><img src="../../public/images/tg-icon.png"></a>

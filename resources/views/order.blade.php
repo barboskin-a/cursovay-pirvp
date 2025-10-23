@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../public/css/order.css">
+    <link href="{{ asset('css/order.css') }}" rel="stylesheet">
     <title>Оформление заказа</title>
 </head>
 <body>

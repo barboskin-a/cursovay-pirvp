@@ -16,11 +16,11 @@
             <nav class="nav-item">
                 <a class="text" href="{{route('index')}}">Главная</a>&emsp;
                 <a class="text" href="{{route('map')}}">Карта</a>&emsp;
-                <a class="text" href="catalog.php">Каталог</a>&emsp;
-                <a class="text" href="resources.php">Ресурсы</a>&emsp;
-                <a class="text" href="about-us.php">О &ensp;нас</a>&emsp;
-                <button><a href="favourites.php"><img src="../../public/images/favourit-icon.svg"></a></button>
-                <button><a href="registration.php"><img src="../../public/images/log-icon.svg"></a></button>
+                <a class="text" href="{{route('catalog')}}">Каталог</a>&emsp;
+                <a class="text" href="{{route('resources')}}">Ресурсы</a>&emsp;
+                <a class="text" href="{{route('about-us')}}">О &ensp;нас</a>&emsp;
+                <button><a href="{{route('favourites')}}"><img src="../../public/images/favourit-icon.svg"></a></button>
+                <button><a href="{{route('registration')}}"><img src="../../public/images/log-icon.svg"></a></button>
             </nav>
         </div>
     </header>
@@ -53,7 +53,7 @@ RU&amp;scroll=true"></script>
                             обществу!</p>
                         <div class="map-button">
                             <img src="../../public/images/butterfly.png">
-                            <button type="button"><a href="map.php">Карта
+                            <button type="button"><a href="{{route('map')}}">Карта
                                     безопасности</a></button>
                         </div>
                     </div>
@@ -155,7 +155,7 @@ RU&amp;scroll=true"></script>
                     </article>
                 </div>
                 <div class="catalog-button">
-                    <button><a class="button" href="catalog.php">Показать еще</a></button>
+                    <button><a class="button" href="{{route('catalog')}}">Показать еще</a></button>
                 </div>
             </div>
         </section>
@@ -177,7 +177,7 @@ RU&amp;scroll=true"></script>
                                         кризисных центрах и номера горячих линий служб поддержки.</p></div>
                             </div>
                             <div class="button-r"><button><a class="button"
-                                                             href="resources.php">Подробнее</a></button></div>
+                                                             href="{{route('resources')}}">Подробнее</a></button></div>
                         </div>
                         <div class="resourse-main-img"> <img src="../../public/images/woman-leaves.png"></div>
                     </div>
@@ -207,7 +207,7 @@ RU&amp;scroll=true"></script>
                                     поддержки и другие важные ресурсы, помогающие женщинам в сложных ситуациях</p>
                             </div>
                         </div>
-                        <div class="button-a"><button><a href="aboutus.php">Подробнее</a></button></div>
+                        <div class="button-a"><button><a href="{{route('about-us')}}">Подробнее</a></button></div>
                     </div>
                 </div>
             </div>
@@ -222,11 +222,11 @@ RU&amp;scroll=true"></script>
                 </div>
                 <div class="footer-nav">
                     <h3>Навигация</h3>
-                    <a class="text" href="index.php">Главная</a>
-                    <a class="text" href="map.php">Карта</a>
-                    <a class="text" href="catalog.php">Каталог</a>
-                    <a class="text" href="resources.php">Ресурсы</a>
-                    <a class="text" href="about-us.php">О нас</a>
+                    <a class="text" href="{{route('index')}}">Главная</a>
+                    <a class="text" href="{{route('map')}}">Карта</a>
+                    <a class="text" href="{{route('catalog')}}">Каталог</a>
+                    <a class="text" href="{{route('resources')}}">Ресурсы</a>
+                    <a class="text" href="{{route('about-us')}}">О нас</a>
                 </div>
                 <div class="footer-project">
                     <h3>О проекте</h3>
@@ -243,7 +243,7 @@ B%D0%AC%D0%9D%D0%9E%D0%A1%D0%A2%D0%98.pdf">Политика
                 </div>
                 <div class="footer-map">
                     <h3>Карта безопасности</h3>
-                    <a href="map.php">Карта безопасных мест</a>
+                    <a href="{{route('map')}}">Карта безопасных мест</a>
                     <a href="">Добавить место</a>
                     <div class="footer-icon">
                         <a href="https://t.me/woman_safe"><img src="../../public/images/tg-icon.png"></a>
