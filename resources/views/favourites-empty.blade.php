@@ -21,6 +21,7 @@
                 <a class="text" href="{{route('about-us')}}">О &ensp;нас</a>&emsp;
                 <button><a href="{{route('favourites')}}"><img src="../../public/images/favourit-icon.svg"></a></button>
                 <button><a href="{{route('registration')}}"><img src="../../public/images/log-icon.svg"></a></button>
+                <button><a href="{{route('index')}}"><img src="../../public/images/exit_icon.png"></a></button>
             </nav>
         </div>
     </header>

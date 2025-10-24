@@ -62,6 +62,7 @@ body {
     width: 85%;
     height: 85%;
 }
+
 .main {
     max-width: 96rem;
 }
@@ -78,6 +79,7 @@ body {
     z-index: -100;
     width: 100%;
 }
+
 .preview button {
     font-family: 'AnonymousPro Regular';
     border: none;

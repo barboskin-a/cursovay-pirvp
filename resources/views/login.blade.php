@@ -11,9 +11,9 @@
         <section class="forms">
             <h2>Вход</h2>
             <form method="post">
+                @csrf
                 <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Электронная
-почта" required>
+                    <input type="email" id="email" name="email" placeholder="Электронная почта" required>
                 </div>
                 <div class="form-group">
                     <input type="password" id="password" name="password"

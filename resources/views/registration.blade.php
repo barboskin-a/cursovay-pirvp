@@ -10,7 +10,9 @@
     <main>
         <section class="forms">
             <h2>Регистрация</h2>
+{{--            для функционала регистрации в юзер контроллере--}}
             <form action= "{{route('registration')}}" method="post">
+                @csrf
                 <div class="form-group">
                     <input type="email" id="email" name="email" placeholder="Электронная почта" required>
                 </div>
@@ -18,13 +20,13 @@
                     <input type="password" id="password" name="password"
                            placeholder="Пароль" required>
                 </div>
-{{--                <div class="form-group">--}}
-{{--                    <input type="password" id="repeat-password" name="repeat-password"--}}
-{{--                           placeholder="Повторите пароль" required>--}}
-{{--                </div>--}}
+                <div class="form-group">
+                    <input type="password" id="password2" name="password2"
+                           placeholder="Повторите пароль" required>
+                </div>
                 <div class="register-and-button">
                     <button type="submit">Зарегистрироваться</button>
-                    <p>Уже есть аккаунт? <a href="login.php">Войти</a></p>
+                    <p>Уже есть аккаунт? <a href="{{route('login')}}">Войти</a></p>
                 </div>
             </form>
         </section>

@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/index', function () {
     return view('index');
 })->name('index');
 
@@ -50,16 +50,24 @@ Route::get('/favourites-empty', function () {
     return view('favourites-empty');
 })->name('favourites-empty');
 
+//login
+
 Route::get('/login', function () {
     return view('login');
 })->name('login');
+
+Route::post('/login', [\App\Http\Controllers\UserController::class, 'login'])->name('login');
 
 Route::get('/order', function () {
     return view('order');
 })->name('order');
 
+//registraion
+
 Route::get('/registration', function () {
     return view('registration');
 })->name('registration');
 
-Route::post('/registration', [\App\Http\Controllers\UserController::class, 'registration'])->name('');
+Route::post('/registration', [\App\Http\Controllers\UserController::class, 'registration'])->name('registration');
+
+Route::post('/logout', [\App\Http\Controllers\UserController::class, 'logout'])->name('logout');

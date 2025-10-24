@@ -10,6 +10,9 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public $timestamps = false;
+    protected $table = 'users';
+
     protected $fillable = [
         'name',
         'email',
@@ -20,7 +23,6 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-    protected $primaryKey = 'id_user';
 
     public function application_acceptance()
     {
