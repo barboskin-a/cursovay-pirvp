@@ -22,8 +22,9 @@
                 <button><a href="{{route('favourites')}}"><img src="../../public/images/favourit-icon.svg"></a></button>
                 <button><a href="{{route('registration')}}"><img src="../../public/images/log-icon.svg"></a></button>
                 @if (Auth::check())
-                <button><a href="{{route('logout')}} method"><img src="../../public/images/exit_icon.png"></a></button>
+                    <button><a href="{{route('logout')}}"><img src="../../public/images/exit_icon.png"></a></button>
                 @endif
+
             </nav>
         </div>
     </header>

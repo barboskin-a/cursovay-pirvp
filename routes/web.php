@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+
 
 Route::get('/index', function () {
     return view('index');
@@ -70,4 +72,9 @@ Route::get('/registration', function () {
 
 Route::post('/registration', [\App\Http\Controllers\UserController::class, 'registration'])->name('registration');
 
-Route::post('/logout', [\App\Http\Controllers\UserController::class, 'logout'])->name('logout');
+Route::get('/logout', [\App\Http\Controllers\UserController::class, 'logout'])->name('logout');
+
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/index', [\App\Http\Controllers\AdminController::class, 'index'])->name('index');
+    Route::resource('/users', AdminController::class);
+});
