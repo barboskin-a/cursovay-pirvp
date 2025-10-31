@@ -39,4 +39,22 @@ class AccountController extends Controller
         return redirect()->route('account')->with('status', 'Данные успешно обновлены');
     }
 
+    public function showDeleteForm()
+    {
+        return view('account.delete');
+    }
+
+    public function destroy(Request $request)
+    {
+        $request->validate([
+            'password' => ['requires', 'current_password'],
+        ]);
+
+        $user = $request->user();
+        Auth::logout();
+        $user->delete();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/index')->with('status', 'Ваш профиль был успешно удален');
+    }
 }

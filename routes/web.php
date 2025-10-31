@@ -82,37 +82,49 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 });
 
 
+//личный кабинет update
+// Показ формы редактирования профиля
+Route::middleware('auth')->get('/account/edit', [UserController::class, 'edit'])
+    ->name('account.edit');
+
+// Сохранение изменений профиля
+Route::middleware('auth')->put('/account/edit', [UserController::class, 'update'])
+    ->name('account.update');
+
 //admin
 
-Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog');
+Route::get('/admin-panel', function () {
+    return view('admin-panel');
+})->name('admin-panel');
 
-
-//Route::view('/catalog-add', 'catalog-add', ['brands' => Brand::all()])
+//Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog');
 //
-//    ->name('catalog-add')
+//Route::get('/catalog-admin', function () {
+//    return view('catalog-admin');
+//})->name('catalog-admin');
+//
+//
+//Route::get('/catalog-admin', [CatalogController::class, 'admin'])
+//    ->name('catalog-admin')
 //    ->middleware(IsAdmin::class)
 //    ->middleware('auth');
 //
-//Route::post('/catalog-add', [CatalogController::class, 'create'])->name('catalog-add')
-//    ->name('catalog-add')
+//Route::delete('/catalog-admin/{id}', [CatalogController::class, 'destroy'])
+//    ->name('delete-product')
 //    ->middleware(IsAdmin::class)
 //    ->middleware('auth');
 //
-//Route::view('/brand-add', 'brand-add')
+//Route::post('/catalog-admin/{id}', [CatalogController::class, 'update'])
+//    ->name('update-product')
 //    ->middleware(IsAdmin::class)
-//    ->name('brand-add');
+//    ->middleware('auth');
+//
+//
 
-Route::get('/catalog-admin', [CatalogController::class, 'admin'])
-    ->name('catalog-admin')
-    ->middleware(IsAdmin::class)
-    ->middleware('auth');
+Route::middleware('auth')->group(function () {
+    Route::get('/account/delete', [\App\Http\Controllers\UserController::class, 'showDelete'])
+        ->name('account.delete.form');
 
-Route::delete('/catalog-admin/{id}', [CatalogController::class, 'destroy'])
-    ->name('delete-product')
-    ->middleware(IsAdmin::class)
-    ->middleware('auth');
-
-Route::post('/catalog-admin/{id}', [CatalogController::class, 'update'])
-    ->name('update-product')
-    ->middleware(IsAdmin::class)
-    ->middleware('auth');
+    Route::delete('/account/delete', [\App\Http\Controllers\UserController::class, 'destroy'])
+        ->name('account.delete');
+});

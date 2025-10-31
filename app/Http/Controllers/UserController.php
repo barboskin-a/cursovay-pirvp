@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 class UserController extends Controller
 {
@@ -45,6 +46,8 @@ class UserController extends Controller
         return redirect('/registration'); //перенаправление на страницу регистрации, если регистрации НЕ успешна
     }
 
+    //авторизация
+
     public function login(Request $request){
         $validated = $request->validate([
             'email' => 'required|string',
@@ -65,6 +68,8 @@ class UserController extends Controller
 
     }
 
+    //выход
+
     public function logout(Request $request)
     {
         Auth::logout();
@@ -73,14 +78,63 @@ class UserController extends Controller
         return redirect('/login');
     }
 
-    public function index(){
-        $user = User::latest()->paginate(10);
-        return view('admin.user.index', compact('user'));
-    }
-    public function show(User $user)
+//удаление
+
+    public function showDelete()
     {
-        return view('users.show', compact('user'));
+        return view('account.delete');
     }
 
+    public function destroy(Request $request)
+    {
+        $user = $request->user();
+
+        if (!$user) {
+            return redirect()->route('login')->with('error', 'Вы не авторизованы.');
+        }
+
+        // Сохраняем email для вывода, если нужно
+        $email = $user->email;
+
+        // Разлогиниваем
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        $user->delete();
+
+        return redirect()
+            ->route('index')
+            ->with('success', "Аккаунт $email был успешно удалён.");
+    }
+
+
+// Показываем форму редактирования профиля
+    public function edit()
+    {
+        $user = Auth::user();
+        return view('account.edit', compact('user'));
+    }
+
+// Сохраняем изменения
+    public function update(Request $request)
+    {
+        $user = Auth::user();
+
+        $validated = $request->validate([
+            'email' => 'required|email|max:255|unique:users,email,' . $user->id,
+            'password' => 'nullable|string|min:6|confirmed',
+        ]);
+
+        $user->email = $validated['email'];
+
+        if (!empty($validated['password'])) {
+            $user->password = Hash::make($validated['password']);
+        }
+
+        $user->save();
+
+        return redirect()->route('account.edit')->with('success', 'Профиль успешно обновлён.');
+    }
 
 }

@@ -30,9 +30,12 @@
             <div class="account-header-text">
                 <h2>Личный кабинет</h2>
             </div>
+
             <div class="account">
                 <div class="account-form">
-                    <form method="post">
+                    <form action="{{ route('account.update') }}" method="POST">
+                        @csrf
+                        @method('PUT')
                         <p>Изменить личные данные</p>
                         <div class="form-group">
                             <label for="name">Имя</label>
@@ -40,16 +43,16 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Электронная почта</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" value="{{ old('email', $user->email) }}" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Телефон</label>
                             <input type="tel" id="phone" name="phone" required>
                         </div>
-{{--                        <div class="form-group">--}}
-{{--                            <label for="address">Адрес</label>--}}
-{{--                            <input type="text" id="address" name="address">--}}
-{{--                        </div>--}}
+                        <div class="form-group">
+                            <label for="address">Адрес</label>
+                            <input type="text" id="address" name="address">
+                        </div>
                         <div class="form-group">
                             <label for="password">Новый пароль</label>
                             <input type="password" id="password" name="password">
@@ -59,6 +62,11 @@
                             <input type="password" id="confirm_password" name="confirm_password">
                         </div>
                         <button type="submit">Сохранить изменения</button>
+                    </form>
+                    <form action="{{ route('account.delete') }}" method="POST" onsubmit="return confirm('Вы уверены, что хотите удалить аккаунт?');">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Удалить аккаунт</button>
                     </form>
                 </div>
                 <div class="account-img">
