@@ -28,6 +28,8 @@ Route::get('/account', function () {
     return view('account');
 })->name('account');
 
+Route::post('/account', [\App\Http\Controllers\AccountController::class, 'store'])->name('account.store');
+
 Route::get('/designer-product', function () {
     return view('designer-product');
 })->name('designer-product');
@@ -78,3 +80,39 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/index', [\App\Http\Controllers\AdminController::class, 'index'])->name('index');
     Route::resource('/users', AdminController::class);
 });
+
+
+//admin
+
+Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog');
+
+
+//Route::view('/catalog-add', 'catalog-add', ['brands' => Brand::all()])
+//
+//    ->name('catalog-add')
+//    ->middleware(IsAdmin::class)
+//    ->middleware('auth');
+//
+//Route::post('/catalog-add', [CatalogController::class, 'create'])->name('catalog-add')
+//    ->name('catalog-add')
+//    ->middleware(IsAdmin::class)
+//    ->middleware('auth');
+//
+//Route::view('/brand-add', 'brand-add')
+//    ->middleware(IsAdmin::class)
+//    ->name('brand-add');
+
+Route::get('/catalog-admin', [CatalogController::class, 'admin'])
+    ->name('catalog-admin')
+    ->middleware(IsAdmin::class)
+    ->middleware('auth');
+
+Route::delete('/catalog-admin/{id}', [CatalogController::class, 'destroy'])
+    ->name('delete-product')
+    ->middleware(IsAdmin::class)
+    ->middleware('auth');
+
+Route::post('/catalog-admin/{id}', [CatalogController::class, 'update'])
+    ->name('update-product')
+    ->middleware(IsAdmin::class)
+    ->middleware('auth');

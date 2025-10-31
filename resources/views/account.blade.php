@@ -46,10 +46,10 @@
                             <label for="phone">Телефон</label>
                             <input type="tel" id="phone" name="phone" required>
                         </div>
-                        <div class="form-group">
-                            <label for="address">Адрес</label>
-                            <input type="text" id="address" name="address">
-                        </div>
+{{--                        <div class="form-group">--}}
+{{--                            <label for="address">Адрес</label>--}}
+{{--                            <input type="text" id="address" name="address">--}}
+{{--                        </div>--}}
                         <div class="form-group">
                             <label for="password">Новый пароль</label>
                             <input type="password" id="password" name="password">

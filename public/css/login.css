@@ -111,3 +111,8 @@ option {
 .form-group a{
     color: #8D1316;
 }
+
+.error-message {
+    font-size: 12px;
+    color: #8D1316;
+}

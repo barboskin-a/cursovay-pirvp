@@ -12,6 +12,9 @@
             <h2>Вход</h2>
             <form method="post">
                 @csrf
+                @error("email")
+                <p class="error-message">{{ $message }}</p>
+                @enderror
                 <div class="form-group">
                     <input type="email" id="email" name="email" placeholder="Электронная почта" required>
                 </div>
