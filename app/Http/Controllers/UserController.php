@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CartItem;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -78,13 +79,12 @@ class UserController extends Controller
         return redirect('/login');
     }
 
-//удаление
+//удаление аккаунта
 
     public function showDelete()
     {
         return view('account.delete');
     }
-
     public function destroy(Request $request)
     {
         $user = $request->user();
@@ -109,32 +109,61 @@ class UserController extends Controller
     }
 
 
-// Показываем форму редактирования профиля
-    public function edit()
+    //Добавление товаров в корзину
+
+
+    public function cartItem()
     {
-        $user = Auth::user();
-        return view('account.edit', compact('user'));
+        return $this->hasMany(CartItem::class);
     }
-
-// Сохраняем изменения
-    public function update(Request $request)
+    public function addToCart($productId, $quantity = 1)
     {
-        $user = Auth::user();
-
-        $validated = $request->validate([
-            'email' => 'required|email|max:255|unique:users,email,' . $user->id,
-            'password' => 'nullable|string|min:6|confirmed',
-        ]);
-
-        $user->email = $validated['email'];
-
-        if (!empty($validated['password'])) {
-            $user->password = Hash::make($validated['password']);
+        $existingItem = $this->cartItem()->where('product_id', $productId)->first();
+        if ($existingItem) {
+            $existingItem->incrementQuantity($quantity);
+            return $this->cartItem()->create(['product_id' => $productId, 'quantity' => $quantity]);
         }
-
-        $user->save();
-
-        return redirect()->route('account.edit')->with('success', 'Профиль успешно обновлён.');
     }
 
+    public function getCartTotalAttribute()
+    {
+        return $this->cartItem()->sum(function ($item) {
+            return $item->total_price;
+        });
+    }
+
+    public function getCartItemsCountAttribute()
+    {
+     return $this->cartItem()->sum('quantity');
+    }
+//
+//
+//// Показываем форму редактирования профиля
+//    public function edit()
+//    {
+//        $user = Auth::user();
+//        return view('account.edit', compact('user'));
+//    }
+//
+//// Сохраняем изменения
+//    public function update(Request $request)
+//    {
+//        $user = Auth::user();
+//
+//        $validated = $request->validate([
+//            'email' => 'required|email|max:255|unique:users,email,' . $user->id,
+//            'password' => 'nullable|string|min:6|confirmed',
+//        ]);
+//
+//        $user->email = $validated['email'];
+//
+//        if (!empty($validated['password'])) {
+//            $user->password = Hash::make($validated['password']);
+//        }
+//
+//        $user->save();
+//
+//        return redirect()->route('account.edit')->with('success', 'Профиль успешно обновлён.');
+//    }
+//
 }
