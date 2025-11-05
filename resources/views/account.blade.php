@@ -43,7 +43,7 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Электронная почта</label>
-                            <input type="email" id="email" name="email" value="{{ old('email', $user->email) }}" required>
+                            <input type="text" id="email" name="email" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Телефон</label>

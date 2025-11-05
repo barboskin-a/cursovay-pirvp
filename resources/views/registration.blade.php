@@ -24,7 +24,7 @@
                            placeholder="Пароль" required>
                 </div>
                 @error('password')
-                <p class="error-message">Пароль должен содержать минимум 6 символов, включая цифры</p>
+                <p class="error-message">Пароль должен содержать минимум 6 символов, включая цифры и латиницу</p>
                 @enderror
                 <div class="form-group">
                     <input type="password" id="password2" name="password2"

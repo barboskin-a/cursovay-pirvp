@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 
 
-Route::get('/index', function () {
+Route::get('/', function () {
     return view('index');
 })->name('index');
 
@@ -27,8 +27,6 @@ Route::get('/about-us', function () {
 Route::get('/account', function () {
     return view('account');
 })->name('account');
-
-Route::post('/account', [\App\Http\Controllers\AccountController::class, 'store'])->name('account.store');
 
 Route::get('/designer-product', function () {
     return view('designer-product');
@@ -77,7 +75,7 @@ Route::post('/registration', [\App\Http\Controllers\UserController::class, 'regi
 Route::get('/logout', [\App\Http\Controllers\UserController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
-    Route::get('/index', [\App\Http\Controllers\AdminController::class, 'index'])->name('index');
+    Route::get('/', [\App\Http\Controllers\AdminController::class, 'index'])->name('index');
     Route::resource('/users', AdminController::class);
 });
 
@@ -118,8 +116,7 @@ Route::get('/admin-panel', function () {
 //    ->name('update-product')
 //    ->middleware(IsAdmin::class)
 //    ->middleware('auth');
-//
-//
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/account/delete', [\App\Http\Controllers\UserController::class, 'showDelete'])

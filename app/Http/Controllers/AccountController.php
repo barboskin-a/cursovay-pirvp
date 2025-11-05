@@ -55,6 +55,6 @@ class AccountController extends Controller
         $user->delete();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/index')->with('status', 'Ваш профиль был успешно удален');
+        return redirect('/')->with('status', 'Ваш профиль был успешно удален');
     }
 }

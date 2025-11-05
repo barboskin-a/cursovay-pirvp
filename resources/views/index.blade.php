@@ -19,12 +19,14 @@
                 <a class="text" href="{{route('catalog')}}">Каталог</a>&emsp;
                 <a class="text" href="{{route('resources')}}">Ресурсы</a>&emsp;
                 <a class="text" href="{{route('about-us')}}">О &ensp;нас</a>&emsp;
-                <button><a href="{{route('favourites')}}"><img src="../../public/images/favourit-icon.svg"></a></button>
-                <button><a href="{{route('account')}}"><img src="../../public/images/log-icon.svg"></a></button>
                 @if (Auth::check())
+                    <button><a href="{{route('favourites')}}"><img src="../../public/images/favourit-icon.svg"></a></button>
+                    <button><a href="{{route('account')}}"><img src="../../public/images/log-icon.svg"></a></button>
                     <button><a href="{{route('logout')}}"><img src="../../public/images/exit_icon.png"></a></button>
                 @endif
-
+                @if (!Auth::check())
+                    <button type="button"><a class="text" href="{{route('login')}}">Вход</a></button>
+                @endif
             </nav>
         </div>
     </header>

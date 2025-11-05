@@ -41,7 +41,7 @@ class UserController extends Controller
 
             Auth::login($user);
 
-            return redirect('/index'); //перенаправление на страницу авторизации, если регистрация успешна
+            return redirect('/'); //перенаправление на страницу авторизации, если регистрация успешна
         }
         return redirect('/registration'); //перенаправление на страницу регистрации, если регистрации НЕ успешна
     }
@@ -50,11 +50,11 @@ class UserController extends Controller
 
     public function login(Request $request){
         $validated = $request->validate([
-            'email' => 'required|string',
+            'email' => 'required|string|email',
             'password' => 'required|string',
         ]);
         if (Auth::attempt(credentials: $request->only('email', 'password'))){
-            return redirect('/index');
+            return redirect('/');
         }
 
         if(!Auth::attempt($request->only('email', 'password'))){
@@ -63,7 +63,7 @@ class UserController extends Controller
             ])
                 ->withInput($request->only('email'));
         }
-        return redirect('/index');
+        return redirect('/');
 
 
     }
