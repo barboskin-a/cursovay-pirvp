@@ -13,29 +13,32 @@ class AccountController extends Controller
     public function update(Request $request)
     {
         $user = Auth::user();
+        $registrationData = session('user_data', []);
+        return view('account.index', [
+            'user' => $user,
+            'registrationData' => $registrationData
+        ]);
+    }
 
-        $validator = Validator::make($request-> all(), [
+    public function update(Request $request)
+    {
+        $user = Auth::user();
+
+        $validated = Validator::make($request-> all(), [
             'name' => 'nullable|string|max:255|unique:user, name',
             'email' => 'nullable|string|max:255',
             'phone' => 'nullable|string|max:11|unique:user, phone_number,' .$user->id,
 //            'address' => 'nullable|string|max:255',
             'password' => 'nullable|string|min:8|confirmed',
             'password2' => 'nullable|string|min:8|same:password',
-    ]);
-        if ($validator->fails()) {
-            return redirect()->back()
-                ->withErrors($validator)
-                ->withInput();
-        }
-
-        $user->update([
-            'name' => $request->input('name'),
-            'email' => $request->input('email'),
-            'phone' => $request->input('phone'),
-//            'address' => $request->input('address'),
-            'password' => $request->input('password'),
-            'password2' => $request->input('password2'),
         ]);
+//        if ($validator->fails()) {
+//            return redirect()->back()
+//                ->withErrors($validator)
+//                ->withInput();
+//        }
+
+        $user->update($validated);
         return redirect()->route('account')->with('status', 'Данные успешно обновлены');
     }
 

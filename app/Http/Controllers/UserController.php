@@ -42,7 +42,7 @@ class UserController extends Controller
 
             Auth::login($user);
 
-            return redirect('/'); //перенаправление на страницу авторизации, если регистрация успешна
+            return redirect('/')->with('success', 'Регистрация прошла успешно')->with('user_data', $validated); //перенаправление на страницу авторизации, если регистрация успешна
         }
         return redirect('/registration'); //перенаправление на страницу регистрации, если регистрации НЕ успешна
     }
