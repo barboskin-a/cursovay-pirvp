@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 
@@ -124,4 +125,14 @@ Route::middleware('auth')->group(function () {
 
     Route::delete('/account/delete', [\App\Http\Controllers\UserController::class, 'destroy'])
         ->name('account.delete');
+});
+
+
+//корзина
+Route::middleware(['auth'])->group(function () {
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::post('/cart/add/{product}', [CartController::class, 'add'])->name('cart.add');
+    Route::put('/cart/update/{product}', [CartController::class, 'update'])->name('cart.update');
+    Route::delete('/cart/remove/{product}', [CartController::class, 'remove'])->name('cart.remove');
+    Route::delete('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
 });

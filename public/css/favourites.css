@@ -134,6 +134,9 @@ body {
 .favourites-cards article {
     flex-grow: 1;
     width: 17rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 .product-price {
     display: flex;
@@ -151,6 +154,52 @@ body {
     border: none;
     background-color: #FFF;
 }
+
+.quantity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 4rem;
+}
+
+.quantity_btn{
+    height: 2rem;
+    width: 3rem;
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(187, 68, 68, 1);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.quantity_btn_minus{
+    cursor: not-allowed;
+}
+
+.quantity_btn_plus{
+    cursor: not-allowed;
+}
+
+.quantity_input{
+    height: 2rem;
+    width: 8rem;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid rgba(187, 68, 68, 1);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
 .product-price img {
     width: 10%;
     height: 10%;

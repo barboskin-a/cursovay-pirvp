@@ -31,6 +31,7 @@
         </div>
     </header>
     <main>
+        @csrf
         <section class="catalog">
             <div class="catalog-main">
                 <div class="catalog-text">
@@ -55,7 +56,7 @@
                                     </div>
                                     <div class="items">
                                         <span>1990₽</span>
-                                        <button><img src="../../public/images/favourit-icon.svg"></button>
+                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +76,7 @@
                                     </div>
                                     <div class="items">
                                         <span>1990₽</span>
-                                        <button><img src="../../public/images/favourit-icon.svg"></button>
+                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -95,7 +96,7 @@
                                     </div>
                                     <div class="items">
                                         <span>1099₽</span>
-                                        <button><img src="../../public/images/favourit-icon.svg"></button>
+                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -118,7 +119,7 @@
                                             <span>699₽</span>
                                             <p>999₽</p>
                                         </div>
-                                        <button><img src="../../public/images/favourit-icon.svg"></button>
+                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -144,7 +145,7 @@
                                     </div>
                                     <div class="items">
                                         <span>1099₽</span>
-                                        <button><img src="../../public/images/favourit-icon.svg"></button>
+                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -164,7 +165,7 @@
                                     </div>
                                     <div class="items">
                                         <span>2699₽</span>
-                                        <button><img src="../../public/images/favourit-icon.svg"></button>
+                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +185,7 @@
                                     </div>
                                     <div class="items">
                                         <span>1099₽</span>
-                                        <button><img src="../../public/images/favourit-icon.svg"></button>
+                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -206,7 +207,7 @@
                                         <div>
                                             <span>2799₽</span>
                                         </div>
-                                        <button><img src="../../public/images/in-favourit.svg"></button>
+                                        <button type="submit"><img src="../../public/images/in-favourit.svg"></button>
                                     </div>
                                 </div>
                             </div>

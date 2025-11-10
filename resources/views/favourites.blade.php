@@ -31,6 +31,7 @@
         </div>
     </header>
     <main>
+        @csrf
         <section class="favourites">
             <div class="favourites-main">
                 <div class="favourites-text">
@@ -57,6 +58,11 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="quantity">
+                                    <button type="submit" class="quantity_btn quantity_btn_minus">-</button>
+                                    <input type="text" class="quantity_input" placeholder="1">
+                                    <button type="submit" class="quantity_btn quantity_btn_plus">+</button>
+                                </div>
                             </div>
                         </article>
                         <article>
@@ -75,6 +81,11 @@
                                             <span>1990₽</span>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="quantity">
+                                    <button type="submit" class="quantity_btn quantity_btn_minus">-</button>
+                                    <input class="quantity_input" placeholder="1">
+                                    <button type="submit" class="quantity_btn quantity_btn_plus">+</button>
                                 </div>
                             </div>
                         </article>
