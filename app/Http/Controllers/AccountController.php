@@ -13,33 +13,34 @@ class AccountController extends Controller
     public function update(Request $request)
     {
         $user = Auth::user();
-        $registrationData = session('user_data', []);
-        return view('account.index', [
-            'user' => $user,
-            'registrationData' => $registrationData
-        ]);
-    }
-
-    public function update(Request $request)
-    {
-        $user = Auth::user();
 
         $validated = Validator::make($request-> all(), [
             'name' => 'nullable|string|max:255|unique:user, name',
             'email' => 'nullable|string|max:255',
             'phone' => 'nullable|string|max:11|unique:user, phone_number,' .$user->id,
-//            'address' => 'nullable|string|max:255',
-            'password' => 'nullable|string|min:8|confirmed',
-            'password2' => 'nullable|string|min:8|same:password',
+            'address' => 'nullable|string|max:255',
+            'password' => 'nullable|string|min:8|confirmed', //проверить поч null
         ]);
-//        if ($validator->fails()) {
-//            return redirect()->back()
-//                ->withErrors($validator)
-//                ->withInput();
-//        }
 
-        $user->update($validated);
-        return redirect()->route('account')->with('status', 'Данные успешно обновлены');
+        if($validated){
+            $user->name = $request->input('name');
+            $user->email = $request->input('email');
+            $user->phone = $request->input('phone');
+            $user->adress = $request->input('adress');
+            $user->password = $request->input('password');
+        }
+
+//        $user->password2 = $request->input('confirm_password');
+
+
+
+        $user->update();
+
+//        return redirect()->route('account')->with('status', 'Данные успешно обновлены');
+//        return view('account.index', [
+//            'user' => $user,
+//            'registrationData' => $registrationData
+//        ]);
     }
 
     public function showDeleteForm()

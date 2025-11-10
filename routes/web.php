@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 
@@ -83,11 +84,11 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 
 //личный кабинет update
 // Показ формы редактирования профиля
-Route::middleware('auth')->get('/account/edit', [UserController::class, 'edit'])
-    ->name('account.edit');
+//Route::middleware('auth')->get('/account/edit', [UserController::class, 'edit'])
+//    ->name('account.edit');
 
 // Сохранение изменений профиля
-Route::middleware('auth')->put('/account/edit', [UserController::class, 'update'])
+Route::middleware('auth')->put('/account/edit', [\App\Http\Controllers\AccountController::class, 'update'])
     ->name('account.update');
 
 //admin

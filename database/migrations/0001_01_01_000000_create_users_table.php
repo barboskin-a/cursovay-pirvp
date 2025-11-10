@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->string('email')->unique();
-            $table->string('phone')->unique();
-            $table->string('address')->unique();
+            $table->string('phone')->nullable();
+            $table->string('adress')->nullable();
             $table->string('password');
             $table->foreignId('id_order')->nullable();
             $table->string('role')->default(0);
