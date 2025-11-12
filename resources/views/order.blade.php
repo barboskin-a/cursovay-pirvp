@@ -52,9 +52,17 @@
                 <div class="form-group">
                     <label for="delivery">Способ доставки</label>
                     <select id="delivery" name="delivery" required>
-                        <option value="">Выберите способ</option>
+                        <option value="">Выберите способ доставки</option>
                         <option value="courier">Курьером</option>
                         <option value="post">Почтой</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pay">Способ оплаты</label>
+                    <select id="pay" name="pay" required>
+                        <option value="">Выберите способ оплаты</option>
+                        <option value="Ucassa">ЮКасса</option>
+                        <option value="cash">При получении</option>
                     </select>
                 </div>
                 <div class="form-group">

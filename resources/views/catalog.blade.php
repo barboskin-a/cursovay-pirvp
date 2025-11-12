@@ -31,7 +31,7 @@
         </div>
     </header>
     <main>
-        @csrf
+        @foreach($products as $product)
         <section class="catalog">
             <div class="catalog-main">
                 <div class="catalog-text">
@@ -41,74 +41,74 @@
                             наборов брелоков</p>
                     </div>
                 </div>
-                <div class="catalog-cards">
-                    <article>
-                        <div class="catalog-img-card">
-                            <img src="../../public/images/product1.png" alt="photo">
-                        </div>
-                        <div class="catalog-text-card">
-                            <div class="catalog-text-card-price">
-                                <p>Набор безопасности №1</p>
-                                <div class="product-price">
-                                    <div>
-                                        <span>Цвет:</span>
-                                        <span class="circle1"></span>
-                                    </div>
-                                    <div class="items">
-                                        <span>1990₽</span>
-                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <div class="catalog-img-card">
-                            <img src="../../public/images/product2.png" alt="photo">
-                        </div>
-                        <div class="catalog-text-card">
-                            <div class="catalog-text-card-price">
-                                <p>Набор безопасности №2</p>
-                                <div class="product-price">
-                                    <div>
-                                        <span>Цвет:</span>
-                                        <span class="circle2"></span>
-                                    </div>
-                                    <div class="items">
-                                        <span>1990₽</span>
-                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <div class="catalog-img-card">
-                            <img src="../../public/images/product3.png" alt="photo">
-                        </div>
-                        <div class="catalog-text-card">
-                            <div class="catalog-text-card-price">
-                                <p>Набор безопасности №3</p>
-                                <div class="product-price">
-                                    <div>
-                                        <span>Цвет:</span>
-                                        <span class="circle3"></span>
-                                    </div>
-                                    <div class="items">
-                                        <span>1099₽</span>
-                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+{{--                <div class="catalog-cards">--}}
+{{--                    <article>--}}
+{{--                        <div class="catalog-img-card">--}}
+{{--                            <img src="../../public/images/product1.png" alt="photo">--}}
+{{--                        </div>--}}
+{{--                        <div class="catalog-text-card">--}}
+{{--                            <div class="catalog-text-card-price">--}}
+{{--                                <p>Набор безопасности №1</p>--}}
+{{--                                <div class="product-price">--}}
+{{--                                    <div>--}}
+{{--                                        <span>Цвет:</span>--}}
+{{--                                        <span class="circle1"></span>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="items">--}}
+{{--                                        <span>1990₽</span>--}}
+{{--                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </article>--}}
+{{--                    <article>--}}
+{{--                        <div class="catalog-img-card">--}}
+{{--                            <img src="../../public/images/product2.png" alt="photo">--}}
+{{--                        </div>--}}
+{{--                        <div class="catalog-text-card">--}}
+{{--                            <div class="catalog-text-card-price">--}}
+{{--                                <p>Набор безопасности №2</p>--}}
+{{--                                <div class="product-price">--}}
+{{--                                    <div>--}}
+{{--                                        <span>Цвет:</span>--}}
+{{--                                        <span class="circle2"></span>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="items">--}}
+{{--                                        <span>1990₽</span>--}}
+{{--                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </article>--}}
+{{--                    <article>--}}
+{{--                        <div class="catalog-img-card">--}}
+{{--                            <img src="../../public/images/product3.png" alt="photo">--}}
+{{--                        </div>--}}
+{{--                        <div class="catalog-text-card">--}}
+{{--                            <div class="catalog-text-card-price">--}}
+{{--                                <p>Набор безопасности №3</p>--}}
+{{--                                <div class="product-price">--}}
+{{--                                    <div>--}}
+{{--                                        <span>Цвет:</span>--}}
+{{--                                        <span class="circle3"></span>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="items">--}}
+{{--                                        <span>1099₽</span>--}}
+{{--                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </article>--}}
                     <article>
                         <div class="catalog-img-card">
                             <img src="../../public/images/product4.png" alt="photo">
                         </div>
                         <div class="catalog-text-card">
                             <div class="catalog-text-card-price">
-                                <p>Набор безопасности №4</p>
+                                <p>{{ $product->name }}</p>
                                 <div class="product-price">
                                     <div>
                                         <span>Цвет:</span>
@@ -116,8 +116,8 @@
                                     </div>
                                     <div class="items">
                                         <div>
-                                            <span>699₽</span>
-                                            <p>999₽</p>
+                                            <span>{{ $product->price }}</span>
+{{--                                            <p>999₽</p>--}}
                                         </div>
                                         <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
                                     </div>
@@ -125,97 +125,98 @@
                             </div>
                         </div>
                     </article>
-                </div>
-            </div>
+{{--                </div>--}}
+{{--            </div>--}}
         </section>
-        <section class="catalog2">
-            <div class="catalog-main">
-                <div class="catalog-cards">
-                    <article>
-                        <div class="catalog-img-card">
-                            <img src="../../public/images/product5.png" alt="photo">
-                        </div>
-                        <div class="catalog-text-card">
-                            <div class="catalog-text-card-price">
-                                <p>Набор безопасности №5</p>
-                                <div class="product-price">
-                                    <div>
-                                        <span>Цвет:</span>
-                                        <span class="circle5"></span>
-                                    </div>
-                                    <div class="items">
-                                        <span>1099₽</span>
-                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <div class="catalog-img-card">
-                            <img src="../../public/images/product6.png" alt="photo">
-                        </div>
-                        <div class="catalog-text-card">
-                            <div class="catalog-text-card-price">
-                                <p>Набор безопасности №6</p>
-                                <div class="product-price">
-                                    <div>
-                                        <span>Цвет:</span>
-                                        <span class="circle6"></span>
-                                    </div>
-                                    <div class="items">
-                                        <span>2699₽</span>
-                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <div class="catalog-img-card">
-                            <img src="../../public/images/product7.png" alt="photo">
-                        </div>
-                        <div class="catalog-text-card">
-                            <div class="catalog-text-card-price">
-                                <p>Набор безопасности №7</p>
-                                <div class="product-price">
-                                    <div>
-                                        <span>Цвет:</span>
-                                        <span class="circle7"></span>
-                                    </div>
-                                    <div class="items">
-                                        <span>1099₽</span>
-                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <div class="catalog-img-card">
-                            <img src="../../public/images/product8.png" alt="photo">
-                        </div>
-                        <div class="catalog-text-card">
-                            <div class="catalog-text-card-price">
-                                <p>Создать свой набор</p>
-                                <div class="product-price">
-                                    <div>
-                                        <span>Цвет:</span>
-                                        <span class="circle8"></span>
-                                    </div>
-                                    <div class="items">
-                                        <div>
-                                            <span>2799₽</span>
-                                        </div>
-                                        <button type="submit"><img src="../../public/images/in-favourit.svg"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+{{--        <section class="catalog2">--}}
+{{--            <div class="catalog-main">--}}
+{{--                <div class="catalog-cards">--}}
+{{--                    <article>--}}
+{{--                        <div class="catalog-img-card">--}}
+{{--                            <img src="../../public/images/product5.png" alt="photo">--}}
+{{--                        </div>--}}
+{{--                        <div class="catalog-text-card">--}}
+{{--                            <div class="catalog-text-card-price">--}}
+{{--                                <p>Набор безопасности №5</p>--}}
+{{--                                <div class="product-price">--}}
+{{--                                    <div>--}}
+{{--                                        <span>Цвет:</span>--}}
+{{--                                        <span class="circle5"></span>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="items">--}}
+{{--                                        <span>1099₽</span>--}}
+{{--                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </article>--}}
+{{--                    <article>--}}
+{{--                        <div class="catalog-img-card">--}}
+{{--                            <img src="../../public/images/product6.png" alt="photo">--}}
+{{--                        </div>--}}
+{{--                        <div class="catalog-text-card">--}}
+{{--                            <div class="catalog-text-card-price">--}}
+{{--                                <p>Набор безопасности №6</p>--}}
+{{--                                <div class="product-price">--}}
+{{--                                    <div>--}}
+{{--                                        <span>Цвет:</span>--}}
+{{--                                        <span class="circle6"></span>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="items">--}}
+{{--                                        <span>2699₽</span>--}}
+{{--                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </article>--}}
+{{--                    <article>--}}
+{{--                        <div class="catalog-img-card">--}}
+{{--                            <img src="../../public/images/product7.png" alt="photo">--}}
+{{--                        </div>--}}
+{{--                        <div class="catalog-text-card">--}}
+{{--                            <div class="catalog-text-card-price">--}}
+{{--                                <p>Набор безопасности №7</p>--}}
+{{--                                <div class="product-price">--}}
+{{--                                    <div>--}}
+{{--                                        <span>Цвет:</span>--}}
+{{--                                        <span class="circle7"></span>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="items">--}}
+{{--                                        <span>1099₽</span>--}}
+{{--                                        <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </article>--}}
+{{--                    <article>--}}
+{{--                        <div class="catalog-img-card">--}}
+{{--                            <img src="../../public/images/product8.png" alt="photo">--}}
+{{--                        </div>--}}
+{{--                        <div class="catalog-text-card">--}}
+{{--                            <div class="catalog-text-card-price">--}}
+{{--                                <p>Создать свой набор</p>--}}
+{{--                                <div class="product-price">--}}
+{{--                                    <div>--}}
+{{--                                        <span>Цвет:</span>--}}
+{{--                                        <span class="circle8"></span>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="items">--}}
+{{--                                        <div>--}}
+{{--                                            <span>2799₽</span>--}}
+{{--                                        </div>--}}
+{{--                                        <button type="submit"><img src="../../public/images/in-favourit.svg"></button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </article>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </section>--}}
+        @endforeach
     </main>
     <footer class="footer">
         <div class="footer-container">

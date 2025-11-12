@@ -16,7 +16,6 @@ class AccountController extends Controller
 
         $validated = Validator::make($request-> all(), [
             'name' => 'nullable|string|max:255|unique:user, name',
-            'email' => 'nullable|string|max:255',
             'phone' => 'nullable|string|max:11|unique:user, phone_number,' .$user->id,
             'address' => 'nullable|string|max:255',
             'password' => 'nullable|string|min:8|confirmed', //проверить поч null
@@ -24,7 +23,6 @@ class AccountController extends Controller
 
         if($validated){
             $user->name = $request->input('name');
-            $user->email = $request->input('email');
             $user->phone = $request->input('phone');
             $user->adress = $request->input('adress');
             $user->password = $request->input('password');

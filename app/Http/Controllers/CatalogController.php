@@ -17,7 +17,6 @@ class CatalogController extends Controller
     {
         return view('catalog', [
             'products' => Product::all(),
-            'brands' => Brand::all()
         ]);
     }
 
