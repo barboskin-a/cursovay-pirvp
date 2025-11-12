@@ -125,7 +125,7 @@
                             </div>
                         </div>
                     </article>
-{{--                </div>--}}
+                </div>
 {{--            </div>--}}
         </section>
 {{--        <section class="catalog2">--}}
