@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
@@ -16,6 +17,8 @@ Route::get('/map', function () {
 })->name('map');
 
 Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog');
+
+//Route::get('/product-card', [CatalogController::class, 'index'])->name('product-card');
 
 Route::get('/resources', function () {
     return view('resources');

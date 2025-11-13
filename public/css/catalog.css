@@ -65,12 +65,19 @@ body {
 .main {
     width: 100%;
 }
+
+.catalog-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+
 /*каталог*/
 .catalog {
-    height: 36rem;
-}
-.catalog2 {
-    height: 33rem;
+    height: 26rem;
 }
 .catalog-main {
     width: 80%;
@@ -108,9 +115,7 @@ body {
     border: 2px solid rgba(221, 221, 221, 0.26);
     border-radius: 5%;
 }
-.catalog-cards article {
-    width: 20rem;
-}
+
 .catalog-cards article img:first-child {
     width: 100%
 }
@@ -159,8 +164,20 @@ body {
     word-spacing: 10rem;
     color: rgba(168, 168, 168, 1);
 }
-.circle1 {
-    background-color: rgba(173, 108, 164, 1);
+
+/*ЦВЕТА CIRCLE {*/
+/*    background-color: rgba(173, 108, 164, 1);*/
+/*    background-color: rgba(86, 194, 227, 1);*/
+/*    background-color: rgba(252, 179, 203, 1);*/
+/*    background-color: rgba(5, 5, 3, 1);*/
+/*    background-color: #8D1316;*/
+/*    background: repeating-linear-gradient(45deg,#000 16px, #FFF);*/
+/*    background-color: #C6C2C9;*/
+/*    background: repeating-linear-gradient(45deg, rgba(5, 5, 3, 1), rgba(173, 108, 164, 1) 10px, rgba(252, 179, 203, 1) 15px, #C6C2C9);*/
+/*}    */
+
+.circle {
+    /*background-color: rgba(173, 108, 164, 1);*/
     border: 1px solid rgba(215, 215, 215, 1);
     border-radius: 100%;
     width: 18px;
@@ -168,77 +185,7 @@ body {
     display: inline-block;
     vertical-align:middle;
 }
-.circle2 {
-    background-color: rgba(86, 194, 227, 1);
-    border: 1px solid rgba(215, 215, 215, 1);
-    border-radius: 100%;
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    vertical-align:middle;
-}
-.circle3 {
-    background-color: rgba(252, 179, 203, 1);
-    border: 1px solid rgba(215, 215, 215, 1);
-    border-radius: 100%;
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    vertical-align:middle;
-}
-.circle4 {
-    background-color: rgba(5, 5, 3, 1);
-    border: 1px solid rgba(215, 215, 215, 1);
-    border-radius: 100%;
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    vertical-align:middle;
-}
-.circle5 {
-    background-color: #8D1316;
-    border: 1px solid rgba(215, 215, 215, 1);
-    border-radius: 100%;
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    vertical-align:middle;
-}
-.circle6 {
-    background: repeating-linear-gradient(
-            45deg,
-            #000 16px,
-            #FFF);
-    border: 1px solid rgba(215, 215, 215, 1);
-    border-radius: 100%;
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    vertical-align:middle;
-}
-.circle7 {
-    background-color: #C6C2C9;
-    border: 1px solid rgba(215, 215, 215, 1);
-    border-radius: 100%;
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    vertical-align:middle;
-}
-.circle8 {
-    background: repeating-linear-gradient(
-            45deg,
-            rgba(5, 5, 3, 1),
-            rgba(173, 108, 164, 1) 10px,
-            rgba(252, 179, 203, 1) 15px,
-            #C6C2C9);
-    border: 1px solid rgba(215, 215, 215, 1);
-    border-radius: 100%;
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    vertical-align:middle;
-}
+
 .catalog-button {
     display: flex;
     justify-content: center;
