@@ -66,7 +66,7 @@ RU&amp;scroll=true"></script>
                 </div>
             </div>
         </section>
-        <section class="catalog">
+        <section class="catalog-index">
             <div class="catalog-main">
                 <div class="catalog-text">
                     <div class="catalog-header-text">
@@ -90,7 +90,7 @@ RU&amp;scroll=true"></script>
                                                 <div class="product-price">
                                                     <div>
                                                         <span>Цвет:</span>
-                                                        <span class="circle" style="background-color: {{ $product->color }};"></span>
+                                                        <span class="circle" style="background: {{ $product->color }};"></span>
                                                     </div>
                                                     <div class="items">
                                                         <div>
@@ -107,6 +107,9 @@ RU&amp;scroll=true"></script>
                             </div>
                         </section>
                     @endforeach
+                </div>
+                <div class="catalog-button">
+                    <button><a class="button" href="{{route('catalog')}}">Показать еще</a></button>
                 </div>
             </div>
         </section>

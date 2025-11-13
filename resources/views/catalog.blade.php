@@ -53,7 +53,7 @@
                                     <div class="product-price">
                                         <div>
                                             <span>Цвет:</span>
-                                            <span class="circle" style="background-color: {{ $product->color }};"></span>
+                                            <span class="circle" style="background: {{ $product->color }};"></span>
                                         </div>
                                         <div class="items">
                                             <div>

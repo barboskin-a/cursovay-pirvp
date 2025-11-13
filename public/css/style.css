@@ -196,6 +196,7 @@ iframe{
 }
 /*каталог*/
 .catalog-section {
+    row-gap: 3rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -205,8 +206,10 @@ iframe{
 }
 
 /*каталог*/
-.catalog {
-    height: 26rem;
+.catalog-index {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(214, 211, 211, 0.34);
 }
 .catalog-main {
     width: 80%;

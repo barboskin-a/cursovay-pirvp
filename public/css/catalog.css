@@ -70,8 +70,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-left: 3%;
+    justify-content: center;
     margin-top: 3%;
 }
 
