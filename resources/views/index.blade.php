@@ -66,6 +66,7 @@ RU&amp;scroll=true"></script>
                 </div>
             </div>
         </section>
+{{--        через пагинацию--}}
         <section class="catalog-index">
             <div class="catalog-main">
                 <div class="catalog-text">
