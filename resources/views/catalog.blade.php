@@ -45,7 +45,7 @@
                     <div class="catalog-cards">
                         <article>
                             <div class="catalog-img-card">
-                                <img src="{{ $product->photo }}" alt="photo">
+                                <a href="{{ route('product_card', $product->id) }} "><img src="{{ $product->photo }}" alt="photo"></a>
                             </div>
                             <div class="catalog-text-card">
                                 <div class="catalog-text-card-price">

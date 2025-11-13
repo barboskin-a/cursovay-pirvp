@@ -21,7 +21,7 @@ Route::get('/map', function () {
 
 Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog');
 
-//Route::get('/product-card', [CatalogController::class, 'index'])->name('product-card');
+Route::get('/product_card/{id}', [CatalogController::class, 'product_card'])->name('product_card');
 
 Route::get('/resources', function () {
     return view('resources');

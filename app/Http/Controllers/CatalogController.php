@@ -20,6 +20,13 @@ class CatalogController extends Controller
         ]);
     }
 
+    public function product_card($id)
+    {
+        $product = Product::query()->findOrFail($id);
+
+        return view('/product_card', ['product' => $product]);
+    }
+
     public function update(Request $request, string $id)
     {
         $validated = $request->validate([

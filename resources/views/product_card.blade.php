@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link href="{{ asset('css/product-card.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/product_card.css') }}" rel="stylesheet">
     <title>Регистрация</title>
 </head>
 <body>
