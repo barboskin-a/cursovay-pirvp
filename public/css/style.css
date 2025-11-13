@@ -63,6 +63,7 @@ body {
     height: 85%;
 }
 
+
 .main {
     max-width: 96rem;
 }
@@ -194,9 +195,18 @@ iframe{
     box-shadow: 0 2px 0 rgb(133, 45, 40);
 }
 /*каталог*/
+.catalog-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+
+/*каталог*/
 .catalog {
-    height: 46rem;
-    border-bottom: 1px solid rgba(214, 211, 211, 0.34);
+    height: 26rem;
 }
 .catalog-main {
     width: 80%;
@@ -224,17 +234,17 @@ iframe{
 }
 .catalog-cards {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 1.6%;
     margin-top: 3%;
 }
 .catalog-img-card {
-    background: radial-gradient(83% 83%, rgba(188, 71, 71, 0.82), rgb(255, 255, 255),
-    transparent);
     background-clip:unset;
     position: relative;
-    border: 2px solid rgba(246, 246, 246, 1);
+    border: 2px solid rgba(221, 221, 221, 0.26);
     border-radius: 5%;
 }
+
 .catalog-cards article img:first-child {
     width: 100%
 }
@@ -249,8 +259,7 @@ iframe{
     font-size: 20px;
 }
 .catalog-cards article {
-    flex-grow: 1;
-    width: 17rem;
+    width: 22rem;
 }
 .product-price {
     display: flex;
@@ -264,6 +273,7 @@ iframe{
     align-items: end;
 }
 .product-price button {
+    width: 3rem;
     border: none;
     background-color: #FFF;
 }
@@ -275,7 +285,7 @@ iframe{
     display: inline-block;
     vertical-align: top;
     word-spacing: 10rem;
-    font-size: 18px;
+    font-size: 22px;
 }
 .product-price p {
     display: inline-block;
@@ -283,35 +293,20 @@ iframe{
     word-spacing: 10rem;
     color: rgba(168, 168, 168, 1);
 }
-.circle1 {
-    background-color: rgba(173, 108, 164, 1);
-    border: 1px solid rgba(215, 215, 215, 1);
-    border-radius: 100%;
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    vertical-align:middle;
-}
-.circle2 {
-    background-color: rgba(86, 194, 227, 1);
-    border: 1px solid rgba(215, 215, 215, 1);
-    border-radius: 100%;
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    vertical-align:middle;
-}
-.circle3 {
-    background-color: rgba(252, 179, 203, 1);
-    border: 1px solid rgba(215, 215, 215, 1);
-    border-radius: 100%;
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    vertical-align:middle;
-}
-.circle4 {
-    background-color: rgba(5, 5, 3, 1);
+
+/*ЦВЕТА CIRCLE {*/
+/*    background-color: rgba(173, 108, 164, 1);*/
+/*    background-color: rgba(86, 194, 227, 1);*/
+/*    background-color: rgba(252, 179, 203, 1);*/
+/*    background-color: rgba(5, 5, 3, 1);*/
+/*    background-color: #8D1316;*/
+/*    background: repeating-linear-gradient(45deg,#000 16px, #FFF);*/
+/*    background-color: #C6C2C9;*/
+/*    background: repeating-linear-gradient(45deg, rgba(5, 5, 3, 1), rgba(173, 108, 164, 1) 10px, rgba(252, 179, 203, 1) 15px, #C6C2C9);*/
+/*}    */
+
+.circle {
+    /*background-color: rgba(173, 108, 164, 1);*/
     border: 1px solid rgba(215, 215, 215, 1);
     border-radius: 100%;
     width: 18px;

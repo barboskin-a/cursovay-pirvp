@@ -5,12 +5,15 @@ use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Product;
 use App\Http\Controllers\AdminController;
 
 
 Route::get('/', function () {
-    return view('index');
+    return view('index', ['products' => Product::all()]);
 })->name('index');
+
+
 
 Route::get('/map', function () {
     return view('map');
