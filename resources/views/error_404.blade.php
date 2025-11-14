@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ asset('css/error-403.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/error_404.css') }}" rel="stylesheet">
     <title>Карта безопасности</title>
 </head>
 <body>
@@ -45,10 +45,10 @@
                     <div class="error-text">
                         <p>4</p>
                         <img src="../../public/images/flower.png">
-                        <p>3</p>
+                        <p>4</p>
                     </div>
                     <div class="error-text2">
-                        <p>Доступ к странице запрещен</p>
+                        <p>Страница не найдена</p>
                     </div>
                     <div class="error-button">
                         <button><a href="{{route('index')}}">Вернуться на главную</a></button>
