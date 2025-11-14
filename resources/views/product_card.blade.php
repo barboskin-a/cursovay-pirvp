@@ -9,7 +9,8 @@
     <div class="card-wind">
         <div class="card">
             <div class="photo">
-                <img src="../../public/images/product4.png" alt="photo">
+{{--                ../../public/images/product4.png--}}
+                <img src="{{ $product->photo }}" alt="photo">
             </div>
             <div class="texts">
                 <div class="bold_text">
@@ -31,7 +32,7 @@
                         <span class="circle" style="background: {{ $product->color }};"></span>
                     </div>
                     <div class="price">
-                        <p>{{ $product->price }}</p>
+                        <p>{{ $product->price }}₽</p>
                     </div>
                 </div>
             </div>

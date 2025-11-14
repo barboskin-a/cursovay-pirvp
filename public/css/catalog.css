@@ -1,3 +1,14 @@
+/*ЦВЕТА CIRCLE {*/
+/*    background-color: rgba(173, 108, 164, 1);*/
+/*    background-color: rgba(86, 194, 227, 1);*/
+/*    background-color: rgba(252, 179, 203, 1);*/
+/*    background-color: rgba(5, 5, 3, 1);*/
+/*    background-color: #8D1316;*/
+/*    background: repeating-linear-gradient(45deg,#000 16px, #FFF);*/
+/*    background-color: #C6C2C9;*/
+/*    background: repeating-linear-gradient(45deg, rgba(5, 5, 3, 1), rgba(173, 108, 164, 1) 10px, rgba(252, 179, 203, 1) 15px, #C6C2C9);*/
+/*}    */
+
 @font-face {
     font-family: "Kiwi Maru Medium";
     src: url('../fonts/KiwiMaru-Medium.ttf');
@@ -163,17 +174,6 @@ body {
     word-spacing: 10rem;
     color: rgba(168, 168, 168, 1);
 }
-
-/*ЦВЕТА CIRCLE {*/
-/*    background-color: rgba(173, 108, 164, 1);*/
-/*    background-color: rgba(86, 194, 227, 1);*/
-/*    background-color: rgba(252, 179, 203, 1);*/
-/*    background-color: rgba(5, 5, 3, 1);*/
-/*    background-color: #8D1316;*/
-/*    background: repeating-linear-gradient(45deg,#000 16px, #FFF);*/
-/*    background-color: #C6C2C9;*/
-/*    background: repeating-linear-gradient(45deg, rgba(5, 5, 3, 1), rgba(173, 108, 164, 1) 10px, rgba(252, 179, 203, 1) 15px, #C6C2C9);*/
-/*}    */
 
 .circle {
     /*background-color: rgba(173, 108, 164, 1);*/

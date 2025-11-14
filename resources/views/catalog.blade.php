@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ asset('css/catalog.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/modal.js') }}"></script>
     <title>Каталог</title>
 </head>
 <body>
@@ -57,7 +58,7 @@
                                         </div>
                                         <div class="items">
                                             <div>
-                                                <span>{{ $product->price }}</span>
+                                                <span>{{ $product->price }}₽</span>
                                                 {{--                                            <p>999₽</p>--}}
                                             </div>
                                             <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>

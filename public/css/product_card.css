@@ -32,12 +32,13 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20% 0 0;
+    padding: 0 14% 0 0;
 }
 .texts{
     display: flex;
     flex-direction: column;
     gap: 40px;
+    max-width: 30%;
 }
 .name{
     font-family: "AnonymousPro Bold";
