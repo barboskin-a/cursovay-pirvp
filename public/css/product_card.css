@@ -16,7 +16,7 @@
     box-sizing: border-box;
 }
 body {
-    width: 60%;
+    width: 50%;
     margin: 0;
 }
 .wrapper {
@@ -37,8 +37,8 @@ body {
 .texts{
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    max-width: 30%;
+    gap: 44px;
+    max-width: 50%;
 }
 .name{
     font-family: "AnonymousPro Bold";

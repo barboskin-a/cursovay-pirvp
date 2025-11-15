@@ -162,7 +162,7 @@ RU&amp;scroll=true"></script>
                                     поддержки и другие важные ресурсы, помогающие женщинам в сложных ситуациях</p>
                             </div>
                         </div>
-                        <div class="button-a"><button><a href="{{route('about-us')}}">Подробнее</a></button></div>
+                        <div class="button-a"><button><a href="{{route('about_us')}}">Подробнее</a></button></div>
                     </div>
                 </div>
             </div>
