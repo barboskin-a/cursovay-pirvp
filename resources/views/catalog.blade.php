@@ -63,7 +63,10 @@
                                                 <span>{{ $product->price }}₽</span>
                                                 {{--                                            <p>999₽</p>--}}
                                             </div>
-                                            <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
+                                            <form method="post" action="{{ route('add_to_favourites',  $product->id) }}">
+                                                @csrf
+                                                <button type="submit"><img src="../../public/images/favourit-icon.svg"></button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>

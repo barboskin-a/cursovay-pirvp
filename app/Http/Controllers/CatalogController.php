@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User_shopping_cart;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -56,5 +58,25 @@ class CatalogController extends Controller
         File::move($oldName, $newName);
         return redirect('/catalog-admin')->with('success', 'Товар изменен');
 
+    }
+
+    //проверка существует ли фейворитс, если да, то обновляем, если нет то создаем
+
+    public function add_to_favourites($id)
+    {
+        $favourites = User_shopping_cart::create([
+            'id_user' => Auth::user()->id,
+            'id_product' => $id,
+            'quantity_product' => 1,
+            'amount_to_pay' => Product::where('id', $id)->firstorfail()->price,
+        ]);
+
+        if($favourites->id_product == $id){
+            $favourites->id_product += 1;
+            $favourites->amount_to_pay += Product::where('id', $id)->firstorfail()->price;
+            $favourites->update();
+        }
+
+        return redirect()->back();
     }
 }

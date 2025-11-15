@@ -169,6 +169,14 @@ body {
     border: none;
     background-color: #FFF;
 }
+
+.product-price button:hover {
+    width: 3rem;
+    border: none;
+    background-color: #FFF;
+    cursor: pointer;
+}
+
 .product-price img {
     width: 10%;
     height: 10%;

@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class User_shopping_cart extends Model
 {
+
+    protected $table = 'users_shopping_cart';
+    public $timestamps = false;
+
     protected $fillable = [
         'id_user',
         'id_product',

@@ -23,6 +23,8 @@ Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog');
 
 Route::get('/product_card/{id}', [CatalogController::class, 'product_card'])->name('product_card');
 
+Route::post('/add_to_favourites/{id}', [CatalogController::class, 'add_to_favourites'])->name('add_to_favourites');
+
 Route::get('/resources', function () {
     return view('resources');
 })->name('resources');
