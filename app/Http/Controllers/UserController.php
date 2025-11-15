@@ -44,7 +44,7 @@ class UserController extends Controller
 
             return redirect('/')->with('success', 'Регистрация прошла успешно')->with('user_data', $validated); //перенаправление на страницу авторизации, если регистрация успешна
         }
-        return redirect('/registration'); //перенаправление на страницу регистрации, если регистрации НЕ успешна
+        return redirect('/registration')->with('success', 'Success registrstion'); //перенаправление на страницу регистрации, если регистрации НЕ успешна
     }
 
     //авторизация
@@ -55,7 +55,7 @@ class UserController extends Controller
             'password' => 'required|string',
         ]);
         if (Auth::attempt(credentials: $request->only('email', 'password'))){
-            return redirect('/');
+            return redirect('/')->with('success', 'Success login');
         }
 
         if(!Auth::attempt($request->only('email', 'password'))){

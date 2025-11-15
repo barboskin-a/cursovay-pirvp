@@ -14,6 +14,11 @@ class CartController extends Controller
         $cartItems = Auth::user()->cartItems()->with('product')->get();
         $total = Auth::user()->cart_total;
         return view('cart.index', compact('cartItems', 'total'));
+
+//        $cost = 0;
+//        if (!empty($/->price)){
+//            $cost += $/->price;
+//        };
     }
 
     public function add(Request $request, Product $product)

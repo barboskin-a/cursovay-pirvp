@@ -21,6 +21,17 @@
     font-family: "AnonymousPro Bold";
     src: url('../fonts/AnonymousPro-Bold.ttf');
 }
+
+/*.modal {*/
+/*    display: none;*/
+/*    position: fixed;*/
+/*    z-index: 1000;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    width: 40%;*/
+/*    height: 40%;*/
+/*    background-color: #1a202c;*/
+/*}*/
 * {
     padding: 0;
     margin: 0;

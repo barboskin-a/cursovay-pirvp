@@ -27,37 +27,37 @@ Route::get('/resources', function () {
     return view('resources');
 })->name('resources');
 
-Route::get('/about-us', function () {
-    return view('about-us');
-})->name('about-us');
+Route::get('/about_us', function () {
+    return view('about_us');
+})->name('about_us');
 
 Route::get('/account', function () {
     return view('account');
 })->name('account');
 
-Route::get('/designer-product', function () {
-    return view('designer-product');
-})->name('designer-product');
+Route::get('/designer_product', function () {
+    return view('designer_product');
+})->name('designer_product');
 
-Route::get('/error-403', function () {
-    return view('error-403');
-})->name('error-403');
+Route::get('/error_403', function () {
+    return view('error_403');
+})->name('error_403');
 
-Route::get('/error-404', function () {
-    return view('error-404');
-})->name('error-404');
+Route::get('/error_404', function () {
+    return view('error_404');
+})->name('error_404');
 
-Route::get('/error-500', function () {
-    return view('error-500');
-})->name('error-500');
+Route::get('/error_500', function () {
+    return view('error_500');
+})->name('error_500');
 
 Route::get('/favourites', function () {
     return view('favourites');
 })->name('favourites');
 
-Route::get('/favourites-empty', function () {
-    return view('favourites-empty');
-})->name('favourites-empty');
+Route::get('/favourites_empty', function () {
+    return view('favourites_empty');
+})->name('favourites_empty');
 
 //login
 
@@ -98,9 +98,9 @@ Route::middleware('auth')->put('/account/edit', [\App\Http\Controllers\AccountCo
 
 //admin
 
-Route::get('/admin-panel', function () {
-    return view('admin-panel');
-})->name('admin-panel');
+Route::get('/admin_panel', function () {
+    return view('admin_panel');
+})->name('admin_panel');
 
 //Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog');
 //

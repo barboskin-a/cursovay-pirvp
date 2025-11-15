@@ -18,7 +18,7 @@
                 <a class="text" href="{{route('map')}}">Карта</a>&emsp;
                 <a class="text" href="{{route('catalog')}}">Каталог</a>&emsp;
                 <a class="text" href="{{route('resources')}}">Ресурсы</a>&emsp;
-                <a class="text" href="{{route('about-us')}}">О &ensp;нас</a>&emsp;
+                <a class="text" href="{{route('about_us')}}">О &ensp;нас</a>&emsp;
                 @if (Auth::check())
                     <button><a href="{{route('favourites')}}"><img src="../../public/images/favourit-icon.svg"></a></button>
                     <button><a href="{{route('account')}}"><img src="../../public/images/log-icon.svg"></a></button>
@@ -87,7 +87,7 @@
                     <a class="text" href="{{route('map')}}">Карта</a>
                     <a class="text" href="{{route('catalog')}}">Каталог</a>
                     <a class="text" href="{{route('resources')}}">Ресурсы</a>
-                    <a class="text" href="{{route('about-us')}}">О нас</a>
+                    <a class="text" href="{{route('about_us')}}">О нас</a>
                 </div>
                 <div class="footer-project">
                     <h3>О проекте</h3>

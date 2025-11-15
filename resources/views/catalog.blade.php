@@ -19,7 +19,7 @@
                 <a class="text" href="{{route('map')}}">Карта</a>&emsp;
                 <a class="text" href="{{route('catalog')}}">Каталог</a>&emsp;
                 <a class="text" href="{{route('resources')}}">Ресурсы</a>&emsp;
-                <a class="text" href="{{route('about-us')}}">О &ensp;нас</a>&emsp;
+                <a class="text" href="{{route('about_us')}}">О &ensp;нас</a>&emsp;
                 @if (Auth::check())
                     <button><a href="{{route('favourites')}}"><img src="../../public/images/favourit-icon.svg"></a></button>
                     <button><a href="{{route('account')}}"><img src="../../public/images/log-icon.svg"></a></button>
@@ -46,7 +46,9 @@
                     <div class="catalog-cards">
                         <article>
                             <div class="catalog-img-card">
-                                <a href="{{ route('product_card', $product->id) }} "><img src="{{ $product->photo }}" alt="photo"></a>
+{{--                                <button onclick="openModal()">--}}
+                                    <a href="{{ route('product_card', $product->id) }} "><img src="{{ $product->photo }}" alt="photo"></a>
+{{--                                </button>--}}
                             </div>
                             <div class="catalog-text-card">
                                 <div class="catalog-text-card-price">
@@ -86,7 +88,7 @@
                     <a class="link" href="{{route('map')}}">Карта</a>
                     <a class="link" href="{{route('catalog')}}">Каталог</a>
                     <a class="link" href="{{route('resources')}}">Ресурсы</a>
-                    <a class="link" href="{{route('about-us')}}">О нас</a>
+                    <a class="link" href="{{route('about_us')}}">О нас</a>
                 </div>
                 <div class="footer-project">
                     <h3>О проекте</h3>

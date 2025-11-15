@@ -4,7 +4,7 @@ document.querySelectorAll('.quantity').forEach(counter=> {
         const plus = counter.querySelector('.quantity_btn_plus');
 
         plus.addEventListener('click', () =>{
-            let value = parseiInt(input.value);
+            let value = parseInt(input.value);
             input.value = ++value;
             if(value > 1) minus.classList.remove('minus');
             update(input, value);
@@ -12,7 +12,7 @@ document.querySelectorAll('.quantity').forEach(counter=> {
 
 
         minus.addEventListener('click', () =>{
-            let value = parseiInt(input.value);
+            let value = parseInt(input.value);
             if(value > 1){
                 input.value = --value;
                 if(value === 1) minus.classList.add('minus');
