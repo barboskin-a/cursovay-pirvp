@@ -43,11 +43,11 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Электронная почта</label>
-                            <a>{{Auth::user()->email}}</a>
+                            <input type="text" id="phone" name="phone" placeholder="{{Auth::user()->email}}"disabled>
                         </div>
                         <div class="form-group">
                             <label for="phone">Телефон</label>
-                            <input type="tel" id="phone" name="phone">
+                            <input type="text" id="phone" name="phone">
                         </div>
                         <div class="form-group">
                             <label for="address">Адрес</label>

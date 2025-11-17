@@ -6,15 +6,18 @@ use App\Models\CartItem;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\View\View;
 use Symfony\Component\HttpKernel\Profiler\Profile;
+use Illuminate\Pagination\Paginator; //новое
 
 class UserController extends Controller
 {
     public $password2;
 
-    //функционал регистрации
+    //ФУНКЦИОНАЛ РЕГИСТРАЦИИ
 
     public function registration(Request $request)
     {
@@ -47,7 +50,7 @@ class UserController extends Controller
         return redirect('/registration')->with('success', 'Success registrstion'); //перенаправление на страницу регистрации, если регистрации НЕ успешна
     }
 
-    //авторизация
+    //ФУНКЦИОНАЛ АВТОРИЗАЦИИ
 
     public function login(Request $request){
         $validated = $request->validate([
@@ -69,7 +72,7 @@ class UserController extends Controller
 
     }
 
-    //выход
+    //ФУНКЦИОНАЛ ВЫХОДА ИЗ АККАУНТА
 
     public function logout(Request $request)
     {
@@ -79,7 +82,7 @@ class UserController extends Controller
         return redirect('/login');
     }
 
-//удаление аккаунта
+//ФУНКЦИОНАЛ УДАЛЕНИЯ АККАУНТА
 
     public function showDelete()
     {
@@ -108,34 +111,34 @@ class UserController extends Controller
             ->with('success', "Аккаунт $email был успешно удалён.");
     }
 
-
-    //Добавление товаров в корзину
-
-
-    public function cartItem()
-    {
-        return $this->hasMany(CartItem::class);
-    }
-    public function addToCart($productId, $quantity = 1)
-    {
-        $existingItem = $this->cartItem()->where('product_id', $productId)->first();
-        if ($existingItem) {
-            $existingItem->incrementQuantity($quantity);
-            return $this->cartItem()->create(['product_id' => $productId, 'quantity' => $quantity]);
-        }
-    }
-
-    public function getCartTotalAttribute()
-    {
-        return $this->cartItem()->sum(function ($item) {
-            return $item->total_price;
-        });
-    }
-
-    public function getCartItemsCountAttribute()
-    {
-     return $this->cartItem()->sum('quantity');
-    }
+//
+//    //Добавление товаров в корзину
+//
+//
+//    public function cartItem()
+//    {
+//        return $this->hasMany(CartItem::class);
+//    }
+//    public function addToCart($productId, $quantity = 1)
+//    {
+//        $existingItem = $this->cartItem()->where('product_id', $productId)->first();
+//        if ($existingItem) {
+//            $existingItem->incrementQuantity($quantity);
+//            return $this->cartItem()->create(['product_id' => $productId, 'quantity' => $quantity]);
+//        }
+//    }
+//
+//    public function getCartTotalAttribute()
+//    {
+//        return $this->cartItem()->sum(function ($item) {
+//            return $item->total_price;
+//        });
+//    }
+//
+//    public function getCartItemsCountAttribute()
+//    {
+//     return $this->cartItem()->sum('quantity');
+//    }
 //
 //
 //// Показываем форму редактирования профиля

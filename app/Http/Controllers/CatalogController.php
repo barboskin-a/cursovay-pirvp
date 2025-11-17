@@ -61,7 +61,7 @@ class CatalogController extends Controller
     }
 
     //проверка существует ли фейворитс, если да, то обновляем, если нет то создаем
-
+//сделать флаг, чтобы при повторном нажатии на кнопку избранного товар удалялся из корзины(?)
     public function add_to_favourites($id)
     {
         $favourites = User_shopping_cart::create([
@@ -70,12 +70,17 @@ class CatalogController extends Controller
             'quantity_product' => 1,
             'amount_to_pay' => Product::where('id', $id)->firstorfail()->price,
         ]);
-
         if($favourites->id_product == $id){
-            $favourites->id_product += 1;
-            $favourites->amount_to_pay += Product::where('id', $id)->firstorfail()->price;
+//            $favourites->id_product += 1;
+            $favourites->amount_to_pay = Product::where('id', $id)->firstorfail()->price;
             $favourites->update();
         }
+//        else{
+//            $deleteFav = User_shopping_cart::where('id_user', Auth::user()->id)->where('id_product', $id)->firstorfail();
+//            if($deleteFav){
+//                $deleteFav->delete();
+//            }
+//        }
 
         return redirect()->back();
     }

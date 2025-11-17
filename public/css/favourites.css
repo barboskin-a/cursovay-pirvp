@@ -177,13 +177,13 @@ body {
     cursor: pointer;
 }
 
-.quantity_btn_minus{
-    cursor: not-allowed;
-}
+/*.quantity_btn_minus{*/
+/*    cursor: not-allowed;*/
+/*}*/
 
-.quantity_btn_plus{
-    cursor: not-allowed;
-}
+/*.quantity_btn_plus{*/
+/*    cursor: not-allowed;*/
+/*}*/
 
 .quantity_input{
     height: 2rem;

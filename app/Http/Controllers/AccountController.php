@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Validator;
 
 class AccountController extends Controller
 {
+    //ФУНКЦИОНАЛ ОБНОВЛЕНИЯ ЛИЧНЫХ ДАННЫХ
     public function update(Request $request)
     {
         $user = Auth::user();
@@ -24,13 +25,11 @@ class AccountController extends Controller
         if($validated){
             $user->name = $request->input('name');
             $user->phone = $request->input('phone');
-            $user->adress = $request->input('adress');
+            $user->address = $request->input('address');
             $user->password = $request->input('password');
         }
 
 //        $user->password2 = $request->input('confirm_password');
-
-
 
         $user->update();
 
@@ -41,22 +40,23 @@ class AccountController extends Controller
 //        ]);
     }
 
-    public function showDeleteForm()
-    {
-        return view('account.delete');
-    }
-
-    public function destroy(Request $request)
-    {
-        $request->validate([
-            'password' => ['requires', 'current_password'],
-        ]);
-
-        $user = $request->user();
-        Auth::logout();
-        $user->delete();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-        return redirect('/')->with('status', 'Ваш профиль был успешно удален');
-    }
+    //УДАЛЕНИЕ
+//    public function showDeleteForm()
+//    {
+//        return view('account.delete');
+//    }
+//
+//    public function destroy(Request $request)
+//    {
+//        $request->validate([
+//            'password' => ['requires', 'current_password'],
+//        ]);
+//
+//        $user = $request->user();
+//        Auth::logout();
+//        $user->delete();
+//        $request->session()->invalidate();
+//        $request->session()->regenerateToken();
+//        return redirect('/')->with('status', 'Ваш профиль был успешно удален');
+//    }
 }

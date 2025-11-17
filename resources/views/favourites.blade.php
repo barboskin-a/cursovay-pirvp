@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ asset('css/favourites.css') }}" rel="stylesheet">
+    <script src="{{'js/favourites.js'}}"></script>
     <title>Корзина</title>
 </head>
 <body>

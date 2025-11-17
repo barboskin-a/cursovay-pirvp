@@ -2,16 +2,20 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Product;
 use App\Http\Controllers\AdminController;
 
+//
+//Route::get('/', function () {
+//    return view('index', ['products' => Product::all()]);
+//})->name('index');
 
-Route::get('/', function () {
-    return view('index', ['products' => Product::all()]);
-})->name('index');
+//ПУТЬ С ПАГИНАЦИЕЙ
+Route::get('/', [IndexController::class, 'index']) -> name('index');
 
 
 
