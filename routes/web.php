@@ -65,6 +65,10 @@ Route::get('/favourites_empty', function () {
     return view('favourites_empty');
 })->name('favourites_empty');
 
+Route::get('/order', function () {
+    return view('order');
+})->name('order');
+
 //login
 
 Route::get('/login', function () {

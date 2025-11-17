@@ -96,7 +96,7 @@
                             <p><span>Итог</span> &emsp; 3980₽</p>
                         </div>
                         <div class="favourites-button">
-                            <button><a class="button" href="order.php">Перейти к
+                            <button><a class="button" href="{{route('order')}}">Перейти к
                                     оформлению</a></button>
                         </div>
                     </div>

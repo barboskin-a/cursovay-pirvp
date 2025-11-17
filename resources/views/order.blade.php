@@ -57,10 +57,12 @@
                         <option value="post">Почтой</option>
                     </select>
                 </div>
+
                 <div class="form-group">
                     <label for="pay">Способ оплаты</label>
                     <select id="pay" name="pay" required>
                         <option value="">Выберите способ оплаты</option>
+{{--                        МЕНЯЕМ--}}
                         <option value="Ucassa">ЮКасса</option>
                         <option value="cash">При получении</option>
                     </select>
@@ -71,6 +73,7 @@
                 </div>
                 <div class="sum-and-button">
                     <p>Итоговая сумма: <span>3980₽</span></p>
+{{--                    СДЕЛАТЬ ПСЕВДОФУЦНКЦИЮ АПИ ПЛАТЕЖКИ ЛЕША --}}
                     <button type="submit">Оформить заказ</button>
                 </div>
             </form>
