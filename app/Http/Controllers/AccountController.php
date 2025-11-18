@@ -19,7 +19,7 @@ class AccountController extends Controller
             'name' => 'nullable|string|max:255|unique:user, name',
             'phone' => 'nullable|string|max:11|unique:user, phone_number,' .$user->id,
             'address' => 'nullable|string|max:255',
-            'password' => 'nullable|string|min:8|confirmed', //проверить поч null
+            'password' => 'nullable|string|min:6|confirmed', //проверить поч null
         ]);
 
         if($validated){
