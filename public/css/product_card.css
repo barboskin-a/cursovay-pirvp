@@ -1,0 +1,81 @@
+@font-face {
+    font-family: "Kiwi Maru Medium";
+    src: url('../fonts/KiwiMaru-Medium.ttf');
+}
+@font-face {
+    font-family: "AnonymousPro Regular";
+    src: url('../fonts/AnonymousPro-Regular.ttf');
+}
+@font-face {
+    font-family: "AnonymousPro Bold";
+    src: url('../fonts/AnonymousPro-Bold.ttf');
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 50%;
+    margin: 0;
+}
+.wrapper {
+    overflow: hidden;
+}
+.card-wind{
+    margin: 0 auto;
+    box-shadow: 2px 2px 2px 2px rgba(187, 68, 68, 0.16);
+    border-radius: 40px;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14% 0 0;
+}
+.texts{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 50%;
+}
+.name{
+    font-family: "AnonymousPro Bold";
+    font-size: 24px;
+}
+.color span{
+    font-family: "AnonymousPro Regular";
+    font-size: 20px;
+}
+.price p{
+    font-family: "AnonymousPro Regular";
+    font-size: 20px;
+}
+.description p{
+    font-family: "AnonymousPro Regular";
+    font-size: 16px;
+}
+.component_of_the_product p{
+    font-family: "AnonymousPro Regular";
+    font-size: 16px;
+}
+.circle {
+    /*background-color: rgba(173, 108, 164, 1);*/
+    border: 1px solid rgba(215, 215, 215, 1);
+    border-radius: 100%;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align:middle;
+}
+.reg_text{
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+.cash_color{
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+}
