@@ -56,7 +56,7 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row;
 }
 .logo img {
@@ -66,8 +66,8 @@ body {
 .nav-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    justify-content: space-evenly;
+    gap: 40rem;
 }
 .nav-item a {
     color: black;
@@ -107,10 +107,13 @@ body {
 }
 .catalog-text {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     margin-top: 3%;
     margin-bottom: 3%;
+    align-items: center;
+    gap: 2rem;
 }
 .catalog-header-text {
     align-items: center;
@@ -211,13 +214,12 @@ body {
     vertical-align:middle;
 }
 
-.catalog-button {
+.items {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4%;
+    flex-direction: row;
+    gap: 5px;
 }
-.catalog-button button{
+.items button{
     font-family: 'AnonymousPro Regular';
     background-color: rgba(187, 68, 68, 1);
     border: none;
@@ -225,15 +227,44 @@ body {
     color: #FFF;
     text-decoration: none;
     font-size: 1.2rem;
-    width: 11rem;
-    height: 2.5rem;
+    padding: 6px 16px;
     cursor: pointer;
 }
-.catalog-button button:hover {
+.items button:hover {
     background-color: rgba(198, 52, 52, 1);
-    transform: translateY(-3px);
     box-shadow: 0 2px 0 rgb(133, 45, 40);
 }
+
+.delete button{
+    font-family: 'AnonymousPro Regular';
+    background-color: #FFF;
+    border: 1px solid rgba(187, 68, 68, 1);
+    border-radius: 15px;
+    color: rgba(187, 68, 68, 1);
+}
+
+.delete button:hover{
+    font-family: 'AnonymousPro Regular';
+    background-color: #FFF;
+    border: 1px solid rgba(187, 68, 68, 1);
+    box-shadow: 0 2px 0 rgb(133, 45, 40);
+}
+
+.add button{
+    font-family: 'AnonymousPro Regular';
+    background-color: #FFF;
+    border: 1px solid rgba(187, 68, 68, 1);
+    border-radius: 15px;
+    color: rgba(187, 68, 68, 1);
+}
+
+.add button:hover{
+    font-family: 'AnonymousPro Regular';
+    background-color: #FFF;
+    border: 1px solid rgba(187, 68, 68, 1);
+    box-shadow: 0 2px 0 rgb(133, 45, 40);
+}
+
 /*футтер*/
 .footer {
     margin: 0 auto;
