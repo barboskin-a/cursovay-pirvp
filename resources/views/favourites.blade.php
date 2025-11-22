@@ -40,7 +40,6 @@
                             <h2>Корзина</h2>
                         </div>
                     </div>
-
                     <div class="favourites-container">
                         @foreach($user_shopping_carts as $cart)
                         <div class="favourites-cards">
@@ -72,9 +71,11 @@
                         @endforeach
                     </div>
                     <div class="favourites-order">
-                        <div class="favourites-price-sum">
-                            <p><span>Итог</span> &emsp; 3980₽</p>
-                        </div>
+{{--                        @foreach($products as $product)--}}
+{{--                        <div class="favourites-price-sum">--}}
+{{--                            <p><span>Итог</span> &emsp; {{ $cost->price }}₽</p>--}}
+{{--                        </div>--}}
+{{--                        @endforeach--}}
                         <div class="favourites-button">
                             <button><a class="button" href="{{route('order')}}">Перейти к
                                     оформлению</a></button>

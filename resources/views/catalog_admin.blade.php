@@ -14,7 +14,7 @@
             <nav class="nav-item">
                 <div class="nav_text">
                     <a class="text" href="{{route('catalog_admin')}}">Каталог</a>&emsp;
-    {{--                <a class="text" href="{{route('/')}}">Заявки на метку</a>&emsp;--}}
+                    <a class="text" href="{{route('catalog_admin')}}">Заявки</a>&emsp;
                 </div>
                 <div class="nav_icon">
                     @if (Auth::check())

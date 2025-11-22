@@ -39,6 +39,28 @@
                     наборов брелоков</p>
             </div>
         </div>
+{{--        <!-- Форма фильтрации -->--}}
+{{--        <form method="GET" action="{{ route('catalog') }}" class="mb-4">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-md-4">--}}
+{{--                    <label for="price_sort">Сортировка по цене:</label>--}}
+{{--                    <select name="price_sort" id="price_sort" class="form-control" onchange="this.form.submit()">--}}
+{{--                        <option value="">По умолчанию</option>--}}
+{{--                        <option value="high_to_low" {{ request('price_sort') == 'high_to_low' ? 'selected' : '' }}>--}}
+{{--                            От дорогих к дешевым--}}
+{{--                        </option>--}}
+{{--                        <option value="low_to_high" {{ request('price_sort') == 'low_to_high' ? 'selected' : '' }}>--}}
+{{--                            От дешевых к дорогим--}}
+{{--                        </option>--}}
+{{--                    </select>--}}
+{{--                </div>--}}
+{{--                <div class="row mt-2">--}}
+{{--                    <div class="col-md-12">--}}
+{{--                        <button type="submit" class="btn btn-primary">Применить фильтры</button>--}}
+{{--                        <a href="{{ route('catalog') }}" class="btn btn-secondary">Сбросить</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--        </form>--}}
         <div class="catalog-section">
             @foreach($products as $product)
             <section class="catalog">

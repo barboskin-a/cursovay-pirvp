@@ -21,6 +21,22 @@ class CatalogController extends Controller
         return view('catalog', [
             'products' => Product::all(),
         ]);
+
+        $query = Product::query();
+
+        if($request->has('price_sort')){
+            switch ($request->price_sort) {
+                case 'high_to_low':
+                    $query->orderBy('price', 'desc');
+                    break;
+                    case 'low_to_high':
+                        $query->orderBy('price', 'asc');
+                        break;
+            }
+        }else{
+            $query->orderBy('id', 'desc');
+        }
+        return view('catalog', ['products' => $query->get()]);
     }
 
     public function product_card($id)
@@ -118,4 +134,14 @@ class CatalogController extends Controller
         $user_shopping_carts = User_shopping_cart::all();
         return view('favourites', ['user_shopping_carts' => $user_shopping_carts]);
     }
+
+//    public function calc()
+//    {
+//        $cost = 0;
+//        $products = 'id';
+//        foreach ($products as $product) {
+//            $cost += $product->price;
+//        }
+//    }
+
 }
