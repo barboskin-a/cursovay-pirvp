@@ -135,13 +135,6 @@ class CatalogController extends Controller
         return view('favourites', ['user_shopping_carts' => $user_shopping_carts]);
     }
 
-//    public function calc()
-//    {
-//        $cost = 0;
-//        $products = 'id';
-//        foreach ($products as $product) {
-//            $cost += $product->price;
-//        }
-//    }
+
 
 }
