@@ -55,11 +55,11 @@
                         </div>
                         <div class="form-group">
                             <label for="password">Новый пароль</label>
-                            <input type="password" id="password" name="password" placeholder="{{Auth::user()->password}}">
+                            <input type="password" id="password" name="password">
                         </div>
                         <div class="form-group">
                             <label for="confirm_password">Подтвердите новый пароль</label>
-                            <input type="password" id="confirm_password" name="confirm_password" placeholder="{{Auth::user()->confirm_password}}">
+                            <input type="password" id="confirm_password" name="confirm_password">
                         </div>
                         <button type="submit">Сохранить изменения</button>
                     </form>

@@ -123,6 +123,13 @@ Route::middleware('admin')->group(function () {
     Route::get('/catalog_admin', [\App\Http\Controllers\AdminController::class, 'index'])
         ->name('catalog_admin');
 
-//    Route::delete('/account/delete', [\App\Http\Controllers\UserController::class, 'destroy'])
-//        ->name('account.delete');
+    Route::delete('/product/delete/{id}', [\App\Http\Controllers\AdminController::class, 'destroyProduct'])
+        ->name('product.delete');
+
+    Route::get('/product/create', function () {
+        return view('productCreateModal');
+    })->name('product.create');
+
+    Route::post('/product/create', [\App\Http\Controllers\AdminController::class, 'createProduct'])
+        ->name('product.create');
 });

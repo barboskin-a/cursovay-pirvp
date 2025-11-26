@@ -25,4 +25,35 @@ class AdminController extends Controller
             'products' => Product::all(),
         ]);
     }
+
+    public function destroyProduct(string $id)
+    {
+        Product::where('id', $id)->delete();
+        return back();
+    }
+
+    public function createProduct(Request $request)
+    {
+        $validated = $request->validate([
+//            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'name' => 'required|string|max:255',
+            'color' => 'required|string|max:255',
+            'quantity_product' => 'required|integer',
+            'creator' => 'required|string|max:255',
+            'price' => 'required|integer',
+            'description' => 'required|string|min:20',
+            'component_of_the_product' => 'required|string|min:5',
+        ]);
+
+        Product::create([
+            'photo'=>'photo',
+            'name'=>$validated['name'],
+            'color'=>$validated['color'],
+            'quantity_product'=>$validated['quantity_product'],
+            'creator'=>$validated['creator'],
+            'price'=>$validated['price'],
+            'description'=>$validated['description'],
+            'component_of_the_product'=>$validated['component_of_the_product'],
+        ]);
+    }
 }

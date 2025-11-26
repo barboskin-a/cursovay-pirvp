@@ -34,8 +34,10 @@
                 <span>Админ-панель каталога</span>
             </div>
             <div class="items">
-                @csrf
-                <button type="submit" class="items_add">Добавить новый товар</button>
+                <form method="get" action="{{ route('product.create') }}">
+                    @csrf
+                    <button type="submit" class="items_add">Добавить новый товар</button>
+                </form>
             </div>
         </div>
 
@@ -54,12 +56,14 @@
                                     <div class="catalog-text-card-price">
                                         <p>{{ $product->name }}</p>
                                         <div class="items">
-                                            <form method="post" action="{{ route('add_to_favourites',  $product->id) }}">
+{{--                                            <form method="post" action="{{ route('product.update',  $product->id) }}">--}}
+{{--                                                @csrf--}}
+{{--                                                <button type="submit">Изменить</button>--}}
+{{--                                            </form>--}}
+                                            <form action="{{ route('product.delete', $product->id) }}" method="POST" onsubmit="return confirm('Вы уверены, что хотите удалить товар?');">
                                                 @csrf
-                                                <button type="submit">Изменить</button>
-                                                <div class="delete">
-                                                    <button class="items_delete" type="submit">Удалить</button>
-                                                </div>
+                                                @method('DELETE')
+                                                <button type="submit" class="items_delete">Удалить</button>
                                             </form>
                                         </div>
                                     </div>

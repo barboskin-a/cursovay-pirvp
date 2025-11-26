@@ -44,31 +44,18 @@ class IsAdmin
 //        return redirect('/registration')->with('success', 'Success registrstion'); //перенаправление на страницу регистрации, если регистрации НЕ успешна
 //    }
 
-    public function productDelete()
-    {
-        return view('product.delete');
-    }
-    public function destroyProduct(Request $request)
-    {
-        $user = $request->user();
-
-        if (!$user) {
-            return redirect()->route('login')->with('error', 'Вы не авторизованы.');
-        }
-
-        // Сохраняем email для вывода, если нужно
-        $email = $user->email;
-
-        // Разлогиниваем
-        Auth::logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-
-        $user->delete();
-
-        return redirect()
-            ->route('index')
-            ->with('success', "Аккаунт $email был успешно удалён.");
-    }
+//    public function productDelete()
+//    {
+//        return view('product.delete');
+//    }
+//    public function destroyProduct(Request $request, string $id)
+//    {
+//
+//        $product = Product::where('id', $id)->delete();
+//
+//
+//        $product->delete();
+//
+//    }
 
 }
