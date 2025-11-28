@@ -132,4 +132,11 @@ Route::middleware('admin')->group(function () {
 
     Route::post('/product/create', [\App\Http\Controllers\AdminController::class, 'createProduct'])
         ->name('product.create');
+
+    Route::get('/product/update/{id}', function () {
+        return view('productCreateModal');
+    })    ->name('product.update');
+
+    Route::post('/product/update/{id}', [\App\Http\Controllers\AdminController::class, 'updateProduct'])
+        ->name('product.update');
 });

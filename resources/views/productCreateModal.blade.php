@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ asset('css/account.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/productCreateModal.css') }}" rel="stylesheet">
     <title>Личный кабинет</title>
 </head>
 <body>
@@ -45,7 +45,7 @@
                 <label for="component_of_the_product">Компоненты в товаре</label>
                 <input type="text" id="component_of_the_product" name="component_of_the_product">
             </div>
-            <button type="submit">Сохранить</button>
+            <button type="submit" class="button_form">Сохранить</button>
         </form>
     </div>
 

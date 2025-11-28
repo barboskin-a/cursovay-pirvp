@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "Kiwi Maru Medium";
+    src: url('../fonts/KiwiMaru-Medium.ttf');
+}
+@font-face {
+    font-family: "AnonymousPro Regular";
+    src: url('../fonts/AnonymousPro-Regular.ttf');
+}
+@font-face {
+    font-family: "AnonymousPro Bold";
+    src: url('../fonts/AnonymousPro-Bold.ttf');
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    margin: 0;
+}
+.wrapper {
+    overflow: hidden;
+}
+
+.main {
+    width: 100%;
+}
+.account {
+    width: 40%;
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 2px 2px rgba(187, 68, 68, 0.16);
+    border-radius: 40px;
+}
+.account-form{
+    width: 80%;
+    height: 43rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.account-header-text {
+    display: flex;
+    justify-content: center;
+}
+.account-header-text h2 {
+    font-family: "AnonymousPro Bold";
+    color: #BB4444;
+}
+.personal-account {
+    height: 82rem;
+    margin-top: 3%;
+    /*background-image: url("../img/leaf.png"), url("../img/leaf3.png"), url("images/leaf2.png");*/
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 0 53%, 100% 100%, 100% 60%;
+}
+form {
+    font-family: "AnonymousPro Regular";
+    font-size: 18px;
+    width: 37rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+form p {
+    font-size: 22px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.button_form button {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'AnonymousPro Regular';
+    background-color: rgba(187, 68, 68, 1);
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+.button_form button:hover {
+    background-color: rgba(198, 52, 52, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 2px 0 rgb(133, 45, 40);
+}
+

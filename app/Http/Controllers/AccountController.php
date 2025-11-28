@@ -30,35 +30,12 @@ class AccountController extends Controller
 
         dd($user->name);
 
+        $user->password2 = $request->input('confirm_password');
 
-
-
-//        $user->password2 = $request->input('confirm_password');
-
-//        return redirect()->route('account')->with('status', 'Данные успешно обновлены');
-//        return view('account.index', [
-//            'user' => $user,
-//            'registrationData' => $registrationData
-//        ]);
+        return redirect()->route('account')->with('status', 'Данные успешно обновлены');
+        return view('account.index', [
+            'user' => $user,
+            'registrationData' => $registrationData
+        ]);
     }
-
-    //УДАЛЕНИЕ
-//    public function showDeleteForm()
-//    {
-//        return view('account.delete');
-//    }
-//
-//    public function destroy(Request $request)
-//    {
-//        $request->validate([
-//            'password' => ['requires', 'current_password'],
-//        ]);
-//
-//        $user = $request->user();
-//        Auth::logout();
-//        $user->delete();
-//        $request->session()->invalidate();
-//        $request->session()->regenerateToken();
-//        return redirect('/')->with('status', 'Ваш профиль был успешно удален');
-//    }
 }
