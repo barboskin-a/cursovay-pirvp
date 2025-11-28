@@ -74,7 +74,7 @@ class AdminController extends Controller
             'component_of_the_product' => 'required|string|min:5',
         ]);
 
-        $product = Product::product() -> update([
+        Product::update([
             'photo'=>'photo',
             'name'=>$validated['name'],
             'color'=>$validated['color'],
