@@ -39,7 +39,7 @@ class AdminController extends Controller
     public function createProduct(Request $request)
     {
         $validated = $request->validate([
-//            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
             'name' => 'required|string|max:255',
             'color' => 'required|string|max:255',
             'quantity_product' => 'required|integer',
@@ -49,8 +49,10 @@ class AdminController extends Controller
             'component_of_the_product' => 'required|string|min:5',
         ]);
 
+        $path = $validated['photo']->store('images/photo', 'public');
+
         Product::create([
-            'photo'=>'photo',
+            'photo'=>$path,
             'name'=>$validated['name'],
             'color'=>$validated['color'],
             'quantity_product'=>$validated['quantity_product'],

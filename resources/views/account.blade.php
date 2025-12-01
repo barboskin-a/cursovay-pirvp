@@ -33,33 +33,38 @@
 
             <div class="account">
                 <div class="account-form">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <form action="{{ route('account.update') }}" method="POST">
                         @csrf
                         @method('PUT')
-                        <p>Изменить личные данные</p>
+{{--                        <p>Изменить личные данные</p>--}}
                         <div class="form-group">
                             <label for="name">Имя</label>
-                            <input type="text" id="name" name="name" placeholder="{{Auth::user()->name}}">
+                            <input type="text" id="name" name="name" value="{{ old('name', Auth::user()->name) }}" placeholder="{{Auth::user()->name}}">
                         </div>
                         <div class="form-group">
                             <label for="email">Электронная почта</label>
-                            <input type="text" id="email" name="email" placeholder="{{Auth::user()->email}}" disabled>
+                            <input type="text" id="email" name="email" value="{{ old('email', Auth::user()->email) }}" placeholder="{{Auth::user()->email}}" disabled>
                         </div>
                         <div class="form-group">
                             <label for="phone">Телефон</label>
-                            <input type="text" id="phone" name="phone" placeholder="{{Auth::user()->phone}}">
+                            <input type="text" id="phone" name="phone" value="{{ old('phone', Auth::user()->phone) }}" placeholder="{{Auth::user()->phone}}">
                         </div>
                         <div class="form-group">
                             <label for="address">Адрес</label>
-                            <input type="text" id="address" name="address" placeholder="{{Auth::user()->address}}">
+                            <input type="text" id="address" name="address" value="{{ old('address', Auth::user()->address) }}" placeholder="{{Auth::user()->address}}">
                         </div>
                         <div class="form-group">
                             <label for="password">Новый пароль</label>
-                            <input type="password" id="password" name="password">
-                        </div>
-                        <div class="form-group">
-                            <label for="confirm_password">Подтвердите новый пароль</label>
-                            <input type="password" id="confirm_password" name="confirm_password">
+                            <input type="password" id="password" name="password" value="{{ old('password', Auth::user()->password) }}">
                         </div>
                         <button type="submit">Сохранить изменения</button>
                     </form>

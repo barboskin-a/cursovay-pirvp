@@ -9,7 +9,7 @@
 <body>
 <div class="account">
     <div class="account-form">
-        <form action="{{ route('product.create') }}" method="POST">
+        <form action="{{ route('product.create') }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('POST')
             <p>Добавить товар</p>
