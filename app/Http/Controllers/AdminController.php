@@ -49,7 +49,7 @@ class AdminController extends Controller
             'component_of_the_product' => 'required|string|min:5',
         ]);
 
-        $path = $validated['photo']->store('images/photo', 'public');
+        $path = Storage::url($validated['photo']->store('images','public'));
 
         Product::create([
             'photo'=>$path,

@@ -49,7 +49,7 @@
                             <article>
                                 <div class="catalog-img-card">
                                     {{--                                <button onclick="openModal()">--}}
-                                    <a href="{{ route('product_card', $product->id) }} "><img src="{{ $product->photo }}" alt="photo"></a>
+                                    <a href="{{ route('product_card', $product->id) }} "><img src="{{ asset($product->photo) }}" alt="photo"></a>
                                     {{--                                </button>--}}
                                 </div>
                                 <div class="catalog-text-card">
