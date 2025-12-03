@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ asset('css/productCreateModal.css') }}" rel="stylesheet">
-    <title>Личный кабинет</title>
+    <title>Добавление товара</title>
 </head>
 <body>
 <div class="account">

@@ -29,9 +29,9 @@ class CatalogController extends Controller
                 case 'high_to_low':
                     $query->orderBy('price', 'desc');
                     break;
-                    case 'low_to_high':
-                        $query->orderBy('price', 'asc');
-                        break;
+                case 'low_to_high':
+                    $query->orderBy('price', 'asc');
+                    break;
             }
         }else{
             $query->orderBy('id', 'desc');
@@ -131,10 +131,9 @@ class CatalogController extends Controller
 
     public function view_favourites()
     {
-        $user_shopping_carts = User_shopping_cart::all();
+        $user_shopping_carts = User_shopping_cart::where('id_user', Auth::user()->id)->with('product')->get();
         return view('favourites', ['user_shopping_carts' => $user_shopping_carts]);
+//        dd($user_shopping_carts->toArray());
     }
-
-
-
 }
+

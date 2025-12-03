@@ -68,19 +68,18 @@
                                 </div>
                             </article>
                         </div>
+                            <div class="favourites-order">
+                                <div class="favourites-price-sum">
+                                    <p><span>Итог</span> &emsp; {{ $user_shopping_carts->first()->product->price }}₽</p>
+                                </div>
+                            </div>
                         @endforeach
+                            <div class="favourites-button">
+                                <button><a class="button" href="{{route('order')}}">Перейти к
+                                        оформлению</a></button>
+                            </div>
                     </div>
-{{--                    <div class="favourites-order">--}}
-{{--                        @foreach($products as $product)--}}
-{{--                        <div class="favourites-price-sum">--}}
-{{--                            <p><span>Итог</span> &emsp; {{ $cost->price }}₽</p>--}}
-{{--                        </div>--}}
-{{--                        @endforeach--}}
-{{--                        <div class="favourites-button">--}}
-{{--                            <button><a class="button" href="{{route('order')}}">Перейти к--}}
-{{--                                    оформлению</a></button>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+
                 </div>
             </section>
         </div>

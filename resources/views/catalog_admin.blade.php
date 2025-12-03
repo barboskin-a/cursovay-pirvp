@@ -56,9 +56,9 @@
                                     <div class="catalog-text-card-price">
                                         <p>{{ $product->name }}</p>
                                         <div class="items">
-                                            <form method="post" action="{{ route('product.update',  $product->id) }}">
+                                            <form action="{{ route('product.update',  $product->id) }}" method="get">
                                                 @csrf
-                                                <button type="submit">Изменить</button>
+                                                <button type="submit" class="items_add">Изменить</button>
                                             </form>
                                             <form action="{{ route('product.delete', $product->id) }}" method="POST" onsubmit="return confirm('Вы уверены, что хотите удалить товар?');">
                                                 @csrf

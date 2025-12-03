@@ -66,18 +66,20 @@ class AdminController extends Controller
     public function updateProduct(Request $request, string $id)
     {
         $validated = $request->validate([
-//            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
-            'name' => 'required|string|max:255',
-            'color' => 'required|string|max:255',
-            'quantity_product' => 'required|integer',
-            'creator' => 'required|string|max:255',
-            'price' => 'required|integer',
-            'description' => 'required|string|min:20',
-            'component_of_the_product' => 'required|string|min:5',
+            'photo' => 'image|mimes:jpeg,png,jpg,gif,svg',
+            'name' => 'string|max:255',
+            'color' => 'string|max:255',
+            'quantity_product' => 'integer',
+            'creator' => 'string|max:255',
+            'price' => 'integer',
+            'description' => 'string|min:20',
+            'component_of_the_product' => 'string|min:5',
         ]);
 
+        $path = Storage::url($validated['photo']->store('images','public'));
+
         Product::update([
-            'photo'=>'photo',
+            'photo'=>$path,
             'name'=>$validated['name'],
             'color'=>$validated['color'],
             'quantity_product'=>$validated['quantity_product'],
