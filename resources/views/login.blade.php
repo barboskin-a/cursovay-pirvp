@@ -7,6 +7,28 @@
 </head>
 <body>
 <div class="wrapper">
+    <header class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="{{route('index')}}"><img src="../../public/images/logo.png"></a>
+            </div>
+            <nav class="nav-item">
+                <a class="text" href="{{route('index')}}">Главная</a>&emsp;
+                <a class="text" href="{{route('map')}}">Карта</a>&emsp;
+                <a class="text" href="{{route('catalog')}}">Каталог</a>&emsp;
+                <a class="text" href="{{route('resources')}}">Ресурсы</a>&emsp;
+                <a class="text" href="{{route('about_us')}}">О &ensp;нас</a>&emsp;
+                @if (Auth::check())
+                    <button><a href="{{route('favourites')}}"><img src="../../public/images/favourit-icon.svg"></a></button>
+                    <button><a href="{{route('account')}}"><img src="../../public/images/log-icon.svg"></a></button>
+                    <button><a href="{{route('logout')}}"><img src="../../public/images/exit_icon.png"></a></button>
+                @endif
+                @if (!Auth::check())
+                    <a class="text" href="{{route('login')}}">Вход</a>
+                @endif
+            </nav>
+        </div>
+    </header>
     <main>
         <section class="forms">
             <h2>Вход</h2>
